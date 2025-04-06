@@ -1,0 +1,376 @@
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:  50%|█████     | 1/2 [00:04<00:04,  4.98s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:06<00:00,  2.94s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:06<00:00,  3.24s/it]
+Generating train split: 0 examples [00:00, ? examples/s]Generating train split: 100 examples [00:00, 11470.82 examples/s]
+Map:   0%|          | 0/100 [00:00<?, ? examples/s]Map: 100%|██████████| 100/100 [00:00<00:00, 11665.43 examples/s]
+Map:   0%|          | 0/100 [00:00<?, ? examples/s]Map: 100%|██████████| 100/100 [00:00<00:00, 2507.81 examples/s]
+/home/ec7379/.conda/envs/adaptive-attack/lib/python3.10/site-packages/huggingface_hub/utils/_deprecation.py:100: FutureWarning: Deprecated argument(s) used in '__init__': max_seq_length, dataset_text_field. Will not be supported from version '1.0.0'.
+
+Deprecated positional argument(s) used in SFTTrainer, please use the SFTConfig to set these arguments instead.
+  warnings.warn(message, FutureWarning)
+/home/ec7379/.conda/envs/adaptive-attack/lib/python3.10/site-packages/transformers/training_args.py:1961: FutureWarning: `--push_to_hub_token` is deprecated and will be removed in version 5 of 🤗 Transformers. Use `--hub_token` instead.
+  warnings.warn(
+/home/ec7379/.conda/envs/adaptive-attack/lib/python3.10/site-packages/trl/trainer/sft_trainer.py:269: UserWarning: You passed a `max_seq_length` argument to the SFTTrainer, the value you passed will override the one in the `SFTConfig`.
+  warnings.warn(
+/home/ec7379/.conda/envs/adaptive-attack/lib/python3.10/site-packages/trl/trainer/sft_trainer.py:307: UserWarning: You passed a `dataset_text_field` argument to the SFTTrainer, the value you passed will override the one in the `SFTConfig`.
+  warnings.warn(
+Map:   0%|          | 0/100 [00:00<?, ? examples/s]Map: 100%|██████████| 100/100 [00:00<00:00, 4639.56 examples/s]
+Detected kernel version 4.18.0, which is below the recommended minimum of 5.5.0; this can cause the process to hang. It is recommended to upgrade the kernel to the minimum version or higher.
+[rank0]: Traceback (most recent call last):
+[rank0]:   File "/scratch/network/ec7379/NLPFinalProject/finetune.py", line 234, in <module>
+[rank0]:     trainer.train()
+[rank0]:   File "/home/ec7379/.conda/envs/adaptive-attack/lib/python3.10/site-packages/trl/trainer/sft_trainer.py", line 440, in train
+[rank0]:     output = super().train(*args, **kwargs)
+[rank0]:   File "/home/ec7379/.conda/envs/adaptive-attack/lib/python3.10/site-packages/transformers/trainer.py", line 1932, in train
+[rank0]:     return inner_training_loop(
+[rank0]:   File "/home/ec7379/.conda/envs/adaptive-attack/lib/python3.10/site-packages/transformers/trainer.py", line 2089, in _inner_training_loop
+[rank0]:     model, self.optimizer = self.accelerator.prepare(self.model, self.optimizer)
+[rank0]:   File "/home/ec7379/.conda/envs/adaptive-attack/lib/python3.10/site-packages/accelerate/accelerator.py", line 1296, in prepare
+[rank0]:     result = self._prepare_deepspeed(*args)
+[rank0]:   File "/home/ec7379/.conda/envs/adaptive-attack/lib/python3.10/site-packages/accelerate/accelerator.py", line 1771, in _prepare_deepspeed
+[rank0]:     engine, optimizer, _, lr_scheduler = deepspeed.initialize(**kwargs)
+[rank0]:   File "/home/ec7379/.conda/envs/adaptive-attack/lib/python3.10/site-packages/deepspeed/__init__.py", line 181, in initialize
+[rank0]:     engine = DeepSpeedEngine(args=args,
+[rank0]:   File "/home/ec7379/.conda/envs/adaptive-attack/lib/python3.10/site-packages/deepspeed/runtime/engine.py", line 306, in __init__
+[rank0]:     self._configure_optimizer(optimizer, model_parameters)
+[rank0]:   File "/home/ec7379/.conda/envs/adaptive-attack/lib/python3.10/site-packages/deepspeed/runtime/engine.py", line 1249, in _configure_optimizer
+[rank0]:     self.optimizer = self._configure_zero_optimizer(basic_optimizer)
+[rank0]:   File "/home/ec7379/.conda/envs/adaptive-attack/lib/python3.10/site-packages/deepspeed/runtime/engine.py", line 1573, in _configure_zero_optimizer
+[rank0]:     optimizer = DeepSpeedZeroOptimizer_Stage3(
+[rank0]:   File "/home/ec7379/.conda/envs/adaptive-attack/lib/python3.10/site-packages/deepspeed/runtime/zero/stage3.py", line 362, in __init__
+[rank0]:     self._setup_for_real_optimizer()
+[rank0]:   File "/home/ec7379/.conda/envs/adaptive-attack/lib/python3.10/site-packages/deepspeed/runtime/zero/stage3.py", line 472, in _setup_for_real_optimizer
+[rank0]:     self._create_fp32_partitions()
+[rank0]:   File "/home/ec7379/.conda/envs/adaptive-attack/lib/python3.10/site-packages/deepspeed/runtime/zero/stage3.py", line 864, in _create_fp32_partitions
+[rank0]:     self.device).clone().float().detach())
+[rank0]: torch.cuda.OutOfMemoryError: CUDA out of memory. Tried to allocate 3.77 GiB. GPU 
+E0405 20:30:44.633000 23371033416704 torch/distributed/elastic/multiprocessing/api.py:826] failed (exitcode: 1) local_rank: 0 (pid: 3423488) of binary: /home/ec7379/.conda/envs/adaptive-attack/bin/python
+Traceback (most recent call last):
+  File "/home/ec7379/.conda/envs/adaptive-attack/bin/accelerate", line 8, in <module>
+    sys.exit(main())
+  File "/home/ec7379/.conda/envs/adaptive-attack/lib/python3.10/site-packages/accelerate/commands/accelerate_cli.py", line 48, in main
+    args.func(args)
+  File "/home/ec7379/.conda/envs/adaptive-attack/lib/python3.10/site-packages/accelerate/commands/launch.py", line 1082, in launch_command
+    deepspeed_launcher(args)
+  File "/home/ec7379/.conda/envs/adaptive-attack/lib/python3.10/site-packages/accelerate/commands/launch.py", line 786, in deepspeed_launcher
+    distrib_run.run(args)
+  File "/home/ec7379/.conda/envs/adaptive-attack/lib/python3.10/site-packages/torch/distributed/run.py", line 870, in run
+    elastic_launch(
+  File "/home/ec7379/.conda/envs/adaptive-attack/lib/python3.10/site-packages/torch/distributed/launcher/api.py", line 132, in __call__
+    return launch_agent(self._config, self._entrypoint, list(args))
+  File "/home/ec7379/.conda/envs/adaptive-attack/lib/python3.10/site-packages/torch/distributed/launcher/api.py", line 263, in launch_agent
+    raise ChildFailedError(
+torch.distributed.elastic.multiprocessing.errors.ChildFailedError: 
+============================================================
+finetune.py FAILED
+------------------------------------------------------------
+Failures:
+  <NO_OTHER_FAILURES>
+------------------------------------------------------------
+Root Cause (first observed failure):
+[0]:
+  time      : 2025-04-05_20:30:44
+  host      : adroit-h11g2
+  rank      : 0 (local_rank: 0)
+  exitcode  : 1 (pid: 3423488)
+  error_file: <N/A>
+  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+============================================================
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:  50%|█████     | 1/2 [00:04<00:04,  4.57s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:06<00:00,  2.82s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:06<00:00,  3.08s/it]
+Map:   0%|          | 0/100 [00:00<?, ? examples/s]Map: 100%|██████████| 100/100 [00:00<00:00, 11821.93 examples/s]
+Map:   0%|          | 0/100 [00:00<?, ? examples/s]Map: 100%|██████████| 100/100 [00:00<00:00, 2247.49 examples/s]
+/home/ec7379/.conda/envs/adaptive-attack/lib/python3.10/site-packages/huggingface_hub/utils/_deprecation.py:100: FutureWarning: Deprecated argument(s) used in '__init__': max_seq_length, dataset_text_field. Will not be supported from version '1.0.0'.
+
+Deprecated positional argument(s) used in SFTTrainer, please use the SFTConfig to set these arguments instead.
+  warnings.warn(message, FutureWarning)
+/home/ec7379/.conda/envs/adaptive-attack/lib/python3.10/site-packages/transformers/training_args.py:1961: FutureWarning: `--push_to_hub_token` is deprecated and will be removed in version 5 of 🤗 Transformers. Use `--hub_token` instead.
+  warnings.warn(
+/home/ec7379/.conda/envs/adaptive-attack/lib/python3.10/site-packages/trl/trainer/sft_trainer.py:269: UserWarning: You passed a `max_seq_length` argument to the SFTTrainer, the value you passed will override the one in the `SFTConfig`.
+  warnings.warn(
+/home/ec7379/.conda/envs/adaptive-attack/lib/python3.10/site-packages/trl/trainer/sft_trainer.py:307: UserWarning: You passed a `dataset_text_field` argument to the SFTTrainer, the value you passed will override the one in the `SFTConfig`.
+  warnings.warn(
+Map:   0%|          | 0/100 [00:00<?, ? examples/s]Map: 100%|██████████| 100/100 [00:00<00:00, 4225.02 examples/s]
+Detected kernel version 4.18.0, which is below the recommended minimum of 5.5.0; this can cause the process to hang. It is recommended to upgrade the kernel to the minimum version or higher.
+[rank0]: Traceback (most recent call last):
+[rank0]:   File "/scratch/network/ec7379/NLPFinalProject/finetune.py", line 234, in <module>
+[rank0]:     trainer.train()
+[rank0]:   File "/home/ec7379/.conda/envs/adaptive-attack/lib/python3.10/site-packages/trl/trainer/sft_trainer.py", line 440, in train
+[rank0]:     output = super().train(*args, **kwargs)
+[rank0]:   File "/home/ec7379/.conda/envs/adaptive-attack/lib/python3.10/site-packages/transformers/trainer.py", line 1932, in train
+[rank0]:     return inner_training_loop(
+[rank0]:   File "/home/ec7379/.conda/envs/adaptive-attack/lib/python3.10/site-packages/transformers/trainer.py", line 2089, in _inner_training_loop
+[rank0]:     model, self.optimizer = self.accelerator.prepare(self.model, self.optimizer)
+[rank0]:   File "/home/ec7379/.conda/envs/adaptive-attack/lib/python3.10/site-packages/accelerate/accelerator.py", line 1296, in prepare
+[rank0]:     result = self._prepare_deepspeed(*args)
+[rank0]:   File "/home/ec7379/.conda/envs/adaptive-attack/lib/python3.10/site-packages/accelerate/accelerator.py", line 1771, in _prepare_deepspeed
+[rank0]:     engine, optimizer, _, lr_scheduler = deepspeed.initialize(**kwargs)
+[rank0]:   File "/home/ec7379/.conda/envs/adaptive-attack/lib/python3.10/site-packages/deepspeed/__init__.py", line 181, in initialize
+[rank0]:     engine = DeepSpeedEngine(args=args,
+[rank0]:   File "/home/ec7379/.conda/envs/adaptive-attack/lib/python3.10/site-packages/deepspeed/runtime/engine.py", line 306, in __init__
+[rank0]:     self._configure_optimizer(optimizer, model_parameters)
+[rank0]:   File "/home/ec7379/.conda/envs/adaptive-attack/lib/python3.10/site-packages/deepspeed/runtime/engine.py", line 1249, in _configure_optimizer
+[rank0]:     self.optimizer = self._configure_zero_optimizer(basic_optimizer)
+[rank0]:   File "/home/ec7379/.conda/envs/adaptive-attack/lib/python3.10/site-packages/deepspeed/runtime/engine.py", line 1573, in _configure_zero_optimizer
+[rank0]:     optimizer = DeepSpeedZeroOptimizer_Stage3(
+[rank0]:   File "/home/ec7379/.conda/envs/adaptive-attack/lib/python3.10/site-packages/deepspeed/runtime/zero/stage3.py", line 362, in __init__
+[rank0]:     self._setup_for_real_optimizer()
+[rank0]:   File "/home/ec7379/.conda/envs/adaptive-attack/lib/python3.10/site-packages/deepspeed/runtime/zero/stage3.py", line 472, in _setup_for_real_optimizer
+[rank0]:     self._create_fp32_partitions()
+[rank0]:   File "/home/ec7379/.conda/envs/adaptive-attack/lib/python3.10/site-packages/deepspeed/runtime/zero/stage3.py", line 864, in _create_fp32_partitions
+[rank0]:     self.device).clone().float().detach())
+[rank0]: torch.cuda.OutOfMemoryError: CUDA out of memory. Tried to allocate 3.77 GiB. GPU 
+E0405 20:31:09.572000 22861235512320 torch/distributed/elastic/multiprocessing/api.py:826] failed (exitcode: 1) local_rank: 0 (pid: 3423784) of binary: /home/ec7379/.conda/envs/adaptive-attack/bin/python
+Traceback (most recent call last):
+  File "/home/ec7379/.conda/envs/adaptive-attack/bin/accelerate", line 8, in <module>
+    sys.exit(main())
+  File "/home/ec7379/.conda/envs/adaptive-attack/lib/python3.10/site-packages/accelerate/commands/accelerate_cli.py", line 48, in main
+    args.func(args)
+  File "/home/ec7379/.conda/envs/adaptive-attack/lib/python3.10/site-packages/accelerate/commands/launch.py", line 1082, in launch_command
+    deepspeed_launcher(args)
+  File "/home/ec7379/.conda/envs/adaptive-attack/lib/python3.10/site-packages/accelerate/commands/launch.py", line 786, in deepspeed_launcher
+    distrib_run.run(args)
+  File "/home/ec7379/.conda/envs/adaptive-attack/lib/python3.10/site-packages/torch/distributed/run.py", line 870, in run
+    elastic_launch(
+  File "/home/ec7379/.conda/envs/adaptive-attack/lib/python3.10/site-packages/torch/distributed/launcher/api.py", line 132, in __call__
+    return launch_agent(self._config, self._entrypoint, list(args))
+  File "/home/ec7379/.conda/envs/adaptive-attack/lib/python3.10/site-packages/torch/distributed/launcher/api.py", line 263, in launch_agent
+    raise ChildFailedError(
+torch.distributed.elastic.multiprocessing.errors.ChildFailedError: 
+============================================================
+finetune.py FAILED
+------------------------------------------------------------
+Failures:
+  <NO_OTHER_FAILURES>
+------------------------------------------------------------
+Root Cause (first observed failure):
+[0]:
+  time      : 2025-04-05_20:31:09
+  host      : adroit-h11g2
+  rank      : 0 (local_rank: 0)
+  exitcode  : 1 (pid: 3423784)
+  error_file: <N/A>
+  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+============================================================
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:  50%|█████     | 1/2 [00:04<00:04,  4.53s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:06<00:00,  2.91s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:06<00:00,  3.15s/it]
+Map:   0%|          | 0/100 [00:00<?, ? examples/s]Map: 100%|██████████| 100/100 [00:00<00:00, 7986.87 examples/s]
+Map:   0%|          | 0/100 [00:00<?, ? examples/s]Map: 100%|██████████| 100/100 [00:00<00:00, 1882.77 examples/s]
+/home/ec7379/.conda/envs/adaptive-attack/lib/python3.10/site-packages/huggingface_hub/utils/_deprecation.py:100: FutureWarning: Deprecated argument(s) used in '__init__': max_seq_length, dataset_text_field. Will not be supported from version '1.0.0'.
+
+Deprecated positional argument(s) used in SFTTrainer, please use the SFTConfig to set these arguments instead.
+  warnings.warn(message, FutureWarning)
+/home/ec7379/.conda/envs/adaptive-attack/lib/python3.10/site-packages/transformers/training_args.py:1961: FutureWarning: `--push_to_hub_token` is deprecated and will be removed in version 5 of 🤗 Transformers. Use `--hub_token` instead.
+  warnings.warn(
+/home/ec7379/.conda/envs/adaptive-attack/lib/python3.10/site-packages/trl/trainer/sft_trainer.py:269: UserWarning: You passed a `max_seq_length` argument to the SFTTrainer, the value you passed will override the one in the `SFTConfig`.
+  warnings.warn(
+/home/ec7379/.conda/envs/adaptive-attack/lib/python3.10/site-packages/trl/trainer/sft_trainer.py:307: UserWarning: You passed a `dataset_text_field` argument to the SFTTrainer, the value you passed will override the one in the `SFTConfig`.
+  warnings.warn(
+Map:   0%|          | 0/100 [00:00<?, ? examples/s]Map: 100%|██████████| 100/100 [00:00<00:00, 6674.90 examples/s]
+Detected kernel version 4.18.0, which is below the recommended minimum of 5.5.0; this can cause the process to hang. It is recommended to upgrade the kernel to the minimum version or higher.
+[rank0]: Traceback (most recent call last):
+[rank0]:   File "/scratch/network/ec7379/NLPFinalProject/finetune.py", line 234, in <module>
+[rank0]:     trainer.train()
+[rank0]:   File "/home/ec7379/.conda/envs/adaptive-attack/lib/python3.10/site-packages/trl/trainer/sft_trainer.py", line 440, in train
+[rank0]:     output = super().train(*args, **kwargs)
+[rank0]:   File "/home/ec7379/.conda/envs/adaptive-attack/lib/python3.10/site-packages/transformers/trainer.py", line 1932, in train
+[rank0]:     return inner_training_loop(
+[rank0]:   File "/home/ec7379/.conda/envs/adaptive-attack/lib/python3.10/site-packages/transformers/trainer.py", line 2089, in _inner_training_loop
+[rank0]:     model, self.optimizer = self.accelerator.prepare(self.model, self.optimizer)
+[rank0]:   File "/home/ec7379/.conda/envs/adaptive-attack/lib/python3.10/site-packages/accelerate/accelerator.py", line 1296, in prepare
+[rank0]:     result = self._prepare_deepspeed(*args)
+[rank0]:   File "/home/ec7379/.conda/envs/adaptive-attack/lib/python3.10/site-packages/accelerate/accelerator.py", line 1771, in _prepare_deepspeed
+[rank0]:     engine, optimizer, _, lr_scheduler = deepspeed.initialize(**kwargs)
+[rank0]:   File "/home/ec7379/.conda/envs/adaptive-attack/lib/python3.10/site-packages/deepspeed/__init__.py", line 181, in initialize
+[rank0]:     engine = DeepSpeedEngine(args=args,
+[rank0]:   File "/home/ec7379/.conda/envs/adaptive-attack/lib/python3.10/site-packages/deepspeed/runtime/engine.py", line 306, in __init__
+[rank0]:     self._configure_optimizer(optimizer, model_parameters)
+[rank0]:   File "/home/ec7379/.conda/envs/adaptive-attack/lib/python3.10/site-packages/deepspeed/runtime/engine.py", line 1249, in _configure_optimizer
+[rank0]:     self.optimizer = self._configure_zero_optimizer(basic_optimizer)
+[rank0]:   File "/home/ec7379/.conda/envs/adaptive-attack/lib/python3.10/site-packages/deepspeed/runtime/engine.py", line 1573, in _configure_zero_optimizer
+[rank0]:     optimizer = DeepSpeedZeroOptimizer_Stage3(
+[rank0]:   File "/home/ec7379/.conda/envs/adaptive-attack/lib/python3.10/site-packages/deepspeed/runtime/zero/stage3.py", line 362, in __init__
+[rank0]:     self._setup_for_real_optimizer()
+[rank0]:   File "/home/ec7379/.conda/envs/adaptive-attack/lib/python3.10/site-packages/deepspeed/runtime/zero/stage3.py", line 472, in _setup_for_real_optimizer
+[rank0]:     self._create_fp32_partitions()
+[rank0]:   File "/home/ec7379/.conda/envs/adaptive-attack/lib/python3.10/site-packages/deepspeed/runtime/zero/stage3.py", line 864, in _create_fp32_partitions
+[rank0]:     self.device).clone().float().detach())
+[rank0]: torch.cuda.OutOfMemoryError: CUDA out of memory. Tried to allocate 3.77 GiB. GPU 
+E0405 20:31:38.938000 22390393574400 torch/distributed/elastic/multiprocessing/api.py:826] failed (exitcode: 1) local_rank: 0 (pid: 3424069) of binary: /home/ec7379/.conda/envs/adaptive-attack/bin/python
+Traceback (most recent call last):
+  File "/home/ec7379/.conda/envs/adaptive-attack/bin/accelerate", line 8, in <module>
+    sys.exit(main())
+  File "/home/ec7379/.conda/envs/adaptive-attack/lib/python3.10/site-packages/accelerate/commands/accelerate_cli.py", line 48, in main
+    args.func(args)
+  File "/home/ec7379/.conda/envs/adaptive-attack/lib/python3.10/site-packages/accelerate/commands/launch.py", line 1082, in launch_command
+    deepspeed_launcher(args)
+  File "/home/ec7379/.conda/envs/adaptive-attack/lib/python3.10/site-packages/accelerate/commands/launch.py", line 786, in deepspeed_launcher
+    distrib_run.run(args)
+  File "/home/ec7379/.conda/envs/adaptive-attack/lib/python3.10/site-packages/torch/distributed/run.py", line 870, in run
+    elastic_launch(
+  File "/home/ec7379/.conda/envs/adaptive-attack/lib/python3.10/site-packages/torch/distributed/launcher/api.py", line 132, in __call__
+    return launch_agent(self._config, self._entrypoint, list(args))
+  File "/home/ec7379/.conda/envs/adaptive-attack/lib/python3.10/site-packages/torch/distributed/launcher/api.py", line 263, in launch_agent
+    raise ChildFailedError(
+torch.distributed.elastic.multiprocessing.errors.ChildFailedError: 
+============================================================
+finetune.py FAILED
+------------------------------------------------------------
+Failures:
+  <NO_OTHER_FAILURES>
+------------------------------------------------------------
+Root Cause (first observed failure):
+[0]:
+  time      : 2025-04-05_20:31:38
+  host      : adroit-h11g2
+  rank      : 0 (local_rank: 0)
+  exitcode  : 1 (pid: 3424069)
+  error_file: <N/A>
+  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+============================================================
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:  50%|█████     | 1/2 [00:04<00:04,  4.53s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:06<00:00,  3.07s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:06<00:00,  3.29s/it]
+Map:   0%|          | 0/100 [00:00<?, ? examples/s]Map: 100%|██████████| 100/100 [00:00<00:00, 6808.27 examples/s]
+Map:   0%|          | 0/100 [00:00<?, ? examples/s]Map: 100%|██████████| 100/100 [00:00<00:00, 2097.38 examples/s]
+/home/ec7379/.conda/envs/adaptive-attack/lib/python3.10/site-packages/huggingface_hub/utils/_deprecation.py:100: FutureWarning: Deprecated argument(s) used in '__init__': max_seq_length, dataset_text_field. Will not be supported from version '1.0.0'.
+
+Deprecated positional argument(s) used in SFTTrainer, please use the SFTConfig to set these arguments instead.
+  warnings.warn(message, FutureWarning)
+/home/ec7379/.conda/envs/adaptive-attack/lib/python3.10/site-packages/transformers/training_args.py:1961: FutureWarning: `--push_to_hub_token` is deprecated and will be removed in version 5 of 🤗 Transformers. Use `--hub_token` instead.
+  warnings.warn(
+/home/ec7379/.conda/envs/adaptive-attack/lib/python3.10/site-packages/trl/trainer/sft_trainer.py:269: UserWarning: You passed a `max_seq_length` argument to the SFTTrainer, the value you passed will override the one in the `SFTConfig`.
+  warnings.warn(
+/home/ec7379/.conda/envs/adaptive-attack/lib/python3.10/site-packages/trl/trainer/sft_trainer.py:307: UserWarning: You passed a `dataset_text_field` argument to the SFTTrainer, the value you passed will override the one in the `SFTConfig`.
+  warnings.warn(
+Map:   0%|          | 0/100 [00:00<?, ? examples/s]Map: 100%|██████████| 100/100 [00:00<00:00, 3427.33 examples/s]
+Detected kernel version 4.18.0, which is below the recommended minimum of 5.5.0; this can cause the process to hang. It is recommended to upgrade the kernel to the minimum version or higher.
+[rank0]: Traceback (most recent call last):
+[rank0]:   File "/scratch/network/ec7379/NLPFinalProject/finetune.py", line 234, in <module>
+[rank0]:     trainer.train()
+[rank0]:   File "/home/ec7379/.conda/envs/adaptive-attack/lib/python3.10/site-packages/trl/trainer/sft_trainer.py", line 440, in train
+[rank0]:     output = super().train(*args, **kwargs)
+[rank0]:   File "/home/ec7379/.conda/envs/adaptive-attack/lib/python3.10/site-packages/transformers/trainer.py", line 1932, in train
+[rank0]:     return inner_training_loop(
+[rank0]:   File "/home/ec7379/.conda/envs/adaptive-attack/lib/python3.10/site-packages/transformers/trainer.py", line 2089, in _inner_training_loop
+[rank0]:     model, self.optimizer = self.accelerator.prepare(self.model, self.optimizer)
+[rank0]:   File "/home/ec7379/.conda/envs/adaptive-attack/lib/python3.10/site-packages/accelerate/accelerator.py", line 1296, in prepare
+[rank0]:     result = self._prepare_deepspeed(*args)
+[rank0]:   File "/home/ec7379/.conda/envs/adaptive-attack/lib/python3.10/site-packages/accelerate/accelerator.py", line 1771, in _prepare_deepspeed
+[rank0]:     engine, optimizer, _, lr_scheduler = deepspeed.initialize(**kwargs)
+[rank0]:   File "/home/ec7379/.conda/envs/adaptive-attack/lib/python3.10/site-packages/deepspeed/__init__.py", line 181, in initialize
+[rank0]:     engine = DeepSpeedEngine(args=args,
+[rank0]:   File "/home/ec7379/.conda/envs/adaptive-attack/lib/python3.10/site-packages/deepspeed/runtime/engine.py", line 306, in __init__
+[rank0]:     self._configure_optimizer(optimizer, model_parameters)
+[rank0]:   File "/home/ec7379/.conda/envs/adaptive-attack/lib/python3.10/site-packages/deepspeed/runtime/engine.py", line 1249, in _configure_optimizer
+[rank0]:     self.optimizer = self._configure_zero_optimizer(basic_optimizer)
+[rank0]:   File "/home/ec7379/.conda/envs/adaptive-attack/lib/python3.10/site-packages/deepspeed/runtime/engine.py", line 1573, in _configure_zero_optimizer
+[rank0]:     optimizer = DeepSpeedZeroOptimizer_Stage3(
+[rank0]:   File "/home/ec7379/.conda/envs/adaptive-attack/lib/python3.10/site-packages/deepspeed/runtime/zero/stage3.py", line 362, in __init__
+[rank0]:     self._setup_for_real_optimizer()
+[rank0]:   File "/home/ec7379/.conda/envs/adaptive-attack/lib/python3.10/site-packages/deepspeed/runtime/zero/stage3.py", line 472, in _setup_for_real_optimizer
+[rank0]:     self._create_fp32_partitions()
+[rank0]:   File "/home/ec7379/.conda/envs/adaptive-attack/lib/python3.10/site-packages/deepspeed/runtime/zero/stage3.py", line 864, in _create_fp32_partitions
+[rank0]:     self.device).clone().float().detach())
+[rank0]: torch.cuda.OutOfMemoryError: CUDA out of memory. Tried to allocate 3.77 GiB. GPU 
+E0405 20:32:09.876000 23116276081664 torch/distributed/elastic/multiprocessing/api.py:826] failed (exitcode: 1) local_rank: 0 (pid: 3424358) of binary: /home/ec7379/.conda/envs/adaptive-attack/bin/python
+Traceback (most recent call last):
+  File "/home/ec7379/.conda/envs/adaptive-attack/bin/accelerate", line 8, in <module>
+    sys.exit(main())
+  File "/home/ec7379/.conda/envs/adaptive-attack/lib/python3.10/site-packages/accelerate/commands/accelerate_cli.py", line 48, in main
+    args.func(args)
+  File "/home/ec7379/.conda/envs/adaptive-attack/lib/python3.10/site-packages/accelerate/commands/launch.py", line 1082, in launch_command
+    deepspeed_launcher(args)
+  File "/home/ec7379/.conda/envs/adaptive-attack/lib/python3.10/site-packages/accelerate/commands/launch.py", line 786, in deepspeed_launcher
+    distrib_run.run(args)
+  File "/home/ec7379/.conda/envs/adaptive-attack/lib/python3.10/site-packages/torch/distributed/run.py", line 870, in run
+    elastic_launch(
+  File "/home/ec7379/.conda/envs/adaptive-attack/lib/python3.10/site-packages/torch/distributed/launcher/api.py", line 132, in __call__
+    return launch_agent(self._config, self._entrypoint, list(args))
+  File "/home/ec7379/.conda/envs/adaptive-attack/lib/python3.10/site-packages/torch/distributed/launcher/api.py", line 263, in launch_agent
+    raise ChildFailedError(
+torch.distributed.elastic.multiprocessing.errors.ChildFailedError: 
+============================================================
+finetune.py FAILED
+------------------------------------------------------------
+Failures:
+  <NO_OTHER_FAILURES>
+------------------------------------------------------------
+Root Cause (first observed failure):
+[0]:
+  time      : 2025-04-05_20:32:09
+  host      : adroit-h11g2
+  rank      : 0 (local_rank: 0)
+  exitcode  : 1 (pid: 3424358)
+  error_file: <N/A>
+  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+============================================================
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:  50%|█████     | 1/2 [00:04<00:04,  4.46s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:06<00:00,  2.79s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:06<00:00,  3.04s/it]
+Map:   0%|          | 0/100 [00:00<?, ? examples/s]Map: 100%|██████████| 100/100 [00:00<00:00, 11825.93 examples/s]
+Map:   0%|          | 0/100 [00:00<?, ? examples/s]Map: 100%|██████████| 100/100 [00:00<00:00, 2314.24 examples/s]
+/home/ec7379/.conda/envs/adaptive-attack/lib/python3.10/site-packages/huggingface_hub/utils/_deprecation.py:100: FutureWarning: Deprecated argument(s) used in '__init__': max_seq_length, dataset_text_field. Will not be supported from version '1.0.0'.
+
+Deprecated positional argument(s) used in SFTTrainer, please use the SFTConfig to set these arguments instead.
+  warnings.warn(message, FutureWarning)
+/home/ec7379/.conda/envs/adaptive-attack/lib/python3.10/site-packages/transformers/training_args.py:1961: FutureWarning: `--push_to_hub_token` is deprecated and will be removed in version 5 of 🤗 Transformers. Use `--hub_token` instead.
+  warnings.warn(
+/home/ec7379/.conda/envs/adaptive-attack/lib/python3.10/site-packages/trl/trainer/sft_trainer.py:269: UserWarning: You passed a `max_seq_length` argument to the SFTTrainer, the value you passed will override the one in the `SFTConfig`.
+  warnings.warn(
+/home/ec7379/.conda/envs/adaptive-attack/lib/python3.10/site-packages/trl/trainer/sft_trainer.py:307: UserWarning: You passed a `dataset_text_field` argument to the SFTTrainer, the value you passed will override the one in the `SFTConfig`.
+  warnings.warn(
+Map:   0%|          | 0/100 [00:00<?, ? examples/s]Map: 100%|██████████| 100/100 [00:00<00:00, 3671.81 examples/s]
+Detected kernel version 4.18.0, which is below the recommended minimum of 5.5.0; this can cause the process to hang. It is recommended to upgrade the kernel to the minimum version or higher.
+[rank0]: Traceback (most recent call last):
+[rank0]:   File "/scratch/network/ec7379/NLPFinalProject/finetune.py", line 234, in <module>
+[rank0]:     trainer.train()
+[rank0]:   File "/home/ec7379/.conda/envs/adaptive-attack/lib/python3.10/site-packages/trl/trainer/sft_trainer.py", line 440, in train
+[rank0]:     output = super().train(*args, **kwargs)
+[rank0]:   File "/home/ec7379/.conda/envs/adaptive-attack/lib/python3.10/site-packages/transformers/trainer.py", line 1932, in train
+[rank0]:     return inner_training_loop(
+[rank0]:   File "/home/ec7379/.conda/envs/adaptive-attack/lib/python3.10/site-packages/transformers/trainer.py", line 2089, in _inner_training_loop
+[rank0]:     model, self.optimizer = self.accelerator.prepare(self.model, self.optimizer)
+[rank0]:   File "/home/ec7379/.conda/envs/adaptive-attack/lib/python3.10/site-packages/accelerate/accelerator.py", line 1296, in prepare
+[rank0]:     result = self._prepare_deepspeed(*args)
+[rank0]:   File "/home/ec7379/.conda/envs/adaptive-attack/lib/python3.10/site-packages/accelerate/accelerator.py", line 1771, in _prepare_deepspeed
+[rank0]:     engine, optimizer, _, lr_scheduler = deepspeed.initialize(**kwargs)
+[rank0]:   File "/home/ec7379/.conda/envs/adaptive-attack/lib/python3.10/site-packages/deepspeed/__init__.py", line 181, in initialize
+[rank0]:     engine = DeepSpeedEngine(args=args,
+[rank0]:   File "/home/ec7379/.conda/envs/adaptive-attack/lib/python3.10/site-packages/deepspeed/runtime/engine.py", line 306, in __init__
+[rank0]:     self._configure_optimizer(optimizer, model_parameters)
+[rank0]:   File "/home/ec7379/.conda/envs/adaptive-attack/lib/python3.10/site-packages/deepspeed/runtime/engine.py", line 1249, in _configure_optimizer
+[rank0]:     self.optimizer = self._configure_zero_optimizer(basic_optimizer)
+[rank0]:   File "/home/ec7379/.conda/envs/adaptive-attack/lib/python3.10/site-packages/deepspeed/runtime/engine.py", line 1573, in _configure_zero_optimizer
+[rank0]:     optimizer = DeepSpeedZeroOptimizer_Stage3(
+[rank0]:   File "/home/ec7379/.conda/envs/adaptive-attack/lib/python3.10/site-packages/deepspeed/runtime/zero/stage3.py", line 362, in __init__
+[rank0]:     self._setup_for_real_optimizer()
+[rank0]:   File "/home/ec7379/.conda/envs/adaptive-attack/lib/python3.10/site-packages/deepspeed/runtime/zero/stage3.py", line 472, in _setup_for_real_optimizer
+[rank0]:     self._create_fp32_partitions()
+[rank0]:   File "/home/ec7379/.conda/envs/adaptive-attack/lib/python3.10/site-packages/deepspeed/runtime/zero/stage3.py", line 864, in _create_fp32_partitions
+[rank0]:     self.device).clone().float().detach())
+[rank0]: torch.cuda.OutOfMemoryError: CUDA out of memory. Tried to allocate 3.77 GiB. GPU 
+E0405 20:32:35.417000 22869999924224 torch/distributed/elastic/multiprocessing/api.py:826] failed (exitcode: 1) local_rank: 0 (pid: 3424757) of binary: /home/ec7379/.conda/envs/adaptive-attack/bin/python
+Traceback (most recent call last):
+  File "/home/ec7379/.conda/envs/adaptive-attack/bin/accelerate", line 8, in <module>
+    sys.exit(main())
+  File "/home/ec7379/.conda/envs/adaptive-attack/lib/python3.10/site-packages/accelerate/commands/accelerate_cli.py", line 48, in main
+    args.func(args)
+  File "/home/ec7379/.conda/envs/adaptive-attack/lib/python3.10/site-packages/accelerate/commands/launch.py", line 1082, in launch_command
+    deepspeed_launcher(args)
+  File "/home/ec7379/.conda/envs/adaptive-attack/lib/python3.10/site-packages/accelerate/commands/launch.py", line 786, in deepspeed_launcher
+    distrib_run.run(args)
+  File "/home/ec7379/.conda/envs/adaptive-attack/lib/python3.10/site-packages/torch/distributed/run.py", line 870, in run
+    elastic_launch(
+  File "/home/ec7379/.conda/envs/adaptive-attack/lib/python3.10/site-packages/torch/distributed/launcher/api.py", line 132, in __call__
+    return launch_agent(self._config, self._entrypoint, list(args))
+  File "/home/ec7379/.conda/envs/adaptive-attack/lib/python3.10/site-packages/torch/distributed/launcher/api.py", line 263, in launch_agent
+    raise ChildFailedError(
+torch.distributed.elastic.multiprocessing.errors.ChildFailedError: 
+============================================================
+finetune.py FAILED
+------------------------------------------------------------
+Failures:
+  <NO_OTHER_FAILURES>
+------------------------------------------------------------
+Root Cause (first observed failure):
+[0]:
+  time      : 2025-04-05_20:32:35
+  host      : adroit-h11g2
+  rank      : 0 (local_rank: 0)
+  exitcode  : 1 (pid: 3424757)
+  error_file: <N/A>
+  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+============================================================
