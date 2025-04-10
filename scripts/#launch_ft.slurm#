@@ -1,3 +1,9 @@
+case  in
+    *)
+
+	
+esac
+
 #!/bin/bash
 #SBATCH --job-name=orig_profile  # create a short name for your job
 #SBATCH --nodes=1                # node count

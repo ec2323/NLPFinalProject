@@ -1,7 +1,44 @@
-Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:  50%|█████     | 1/2 [00:04<00:04,  4.98s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:06<00:00,  2.94s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:06<00:00,  3.24s/it]
-Generating train split: 0 examples [00:00, ? examples/s]Generating train split: 100 examples [00:00, 11470.82 examples/s]
-Map:   0%|          | 0/100 [00:00<?, ? examples/s]Map: 100%|██████████| 100/100 [00:00<00:00, 11665.43 examples/s]
-Map:   0%|          | 0/100 [00:00<?, ? examples/s]Map: 100%|██████████| 100/100 [00:00<00:00, 2507.81 examples/s]
+W0409 20:21:55.247000 23109814412288 torch/distributed/run.py:757] 
+W0409 20:21:55.247000 23109814412288 torch/distributed/run.py:757] *****************************************
+W0409 20:21:55.247000 23109814412288 torch/distributed/run.py:757] Setting OMP_NUM_THREADS environment variable for each process to be 1 in default, to avoid your system being overloaded, please further tune the variable for optimal performance in your application as needed. 
+W0409 20:21:55.247000 23109814412288 torch/distributed/run.py:757] *****************************************
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:  50%|█████     | 1/2 [00:01<00:01,  1.99s/it]Loading checkpoint shards:  50%|█████     | 1/2 [00:01<00:01,  1.98s/it]Loading checkpoint shards:  50%|█████     | 1/2 [00:01<00:01,  2.00s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:04<00:00,  2.09s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:04<00:00,  2.07s/it]
+Loading checkpoint shards: 100%|██████████| 2/2 [00:04<00:00,  2.10s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:04<00:00,  2.08s/it]
+Loading checkpoint shards: 100%|██████████| 2/2 [00:04<00:00,  2.10s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:04<00:00,  2.08s/it]
+Loading checkpoint shards:  50%|█████     | 1/2 [00:07<00:07,  7.25s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:09<00:00,  4.44s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:09<00:00,  4.86s/it]
+Map:   0%|          | 0/100 [00:00<?, ? examples/s]Map: 100%|██████████| 100/100 [00:00<00:00, 16975.49 examples/s]
+Map:   0%|          | 0/100 [00:00<?, ? examples/s]Map:   0%|          | 0/100 [00:00<?, ? examples/s]Map: 100%|██████████| 100/100 [00:00<00:00, 18728.75 examples/s]
+Map: 100%|██████████| 100/100 [00:00<00:00, 3424.34 examples/s]
+/home/ec7379/.conda/envs/adaptive-attack/lib/python3.10/site-packages/huggingface_hub/utils/_deprecation.py:100: FutureWarning: Deprecated argument(s) used in '__init__': max_seq_length, dataset_text_field. Will not be supported from version '1.0.0'.
+
+Deprecated positional argument(s) used in SFTTrainer, please use the SFTConfig to set these arguments instead.
+  warnings.warn(message, FutureWarning)
+Map:   0%|          | 0/100 [00:00<?, ? examples/s]Map: 100%|██████████| 100/100 [00:00<00:00, 3876.04 examples/s]
+/home/ec7379/.conda/envs/adaptive-attack/lib/python3.10/site-packages/huggingface_hub/utils/_deprecation.py:100: FutureWarning: Deprecated argument(s) used in '__init__': max_seq_length, dataset_text_field. Will not be supported from version '1.0.0'.
+
+Deprecated positional argument(s) used in SFTTrainer, please use the SFTConfig to set these arguments instead.
+  warnings.warn(message, FutureWarning)
+Map:   0%|          | 0/100 [00:00<?, ? examples/s]Map: 100%|██████████| 100/100 [00:00<00:00, 17077.79 examples/s]
+/home/ec7379/.conda/envs/adaptive-attack/lib/python3.10/site-packages/transformers/training_args.py:1961: FutureWarning: `--push_to_hub_token` is deprecated and will be removed in version 5 of 🤗 Transformers. Use `--hub_token` instead.
+  warnings.warn(
+/home/ec7379/.conda/envs/adaptive-attack/lib/python3.10/site-packages/trl/trainer/sft_trainer.py:269: UserWarning: You passed a `max_seq_length` argument to the SFTTrainer, the value you passed will override the one in the `SFTConfig`.
+  warnings.warn(
+/home/ec7379/.conda/envs/adaptive-attack/lib/python3.10/site-packages/trl/trainer/sft_trainer.py:307: UserWarning: You passed a `dataset_text_field` argument to the SFTTrainer, the value you passed will override the one in the `SFTConfig`.
+  warnings.warn(
+Map:   0%|          | 0/100 [00:00<?, ? examples/s]/home/ec7379/.conda/envs/adaptive-attack/lib/python3.10/site-packages/transformers/training_args.py:1961: FutureWarning: `--push_to_hub_token` is deprecated and will be removed in version 5 of 🤗 Transformers. Use `--hub_token` instead.
+  warnings.warn(
+/home/ec7379/.conda/envs/adaptive-attack/lib/python3.10/site-packages/trl/trainer/sft_trainer.py:269: UserWarning: You passed a `max_seq_length` argument to the SFTTrainer, the value you passed will override the one in the `SFTConfig`.
+  warnings.warn(
+/home/ec7379/.conda/envs/adaptive-attack/lib/python3.10/site-packages/trl/trainer/sft_trainer.py:307: UserWarning: You passed a `dataset_text_field` argument to the SFTTrainer, the value you passed will override the one in the `SFTConfig`.
+  warnings.warn(
+Map:   0%|          | 0/100 [00:00<?, ? examples/s]Map: 100%|██████████| 100/100 [00:00<00:00, 3666.32 examples/s]
+/home/ec7379/.conda/envs/adaptive-attack/lib/python3.10/site-packages/huggingface_hub/utils/_deprecation.py:100: FutureWarning: Deprecated argument(s) used in '__init__': max_seq_length, dataset_text_field. Will not be supported from version '1.0.0'.
+
+Deprecated positional argument(s) used in SFTTrainer, please use the SFTConfig to set these arguments instead.
+  warnings.warn(message, FutureWarning)
+Map:   0%|          | 0/100 [00:00<?, ? examples/s]Map: 100%|██████████| 100/100 [00:00<00:00, 5749.56 examples/s]
+Map: 100%|██████████| 100/100 [00:00<00:00, 16627.57 examples/s]
+Map:   0%|          | 0/100 [00:00<?, ? examples/s]Map: 100%|██████████| 100/100 [00:00<00:00, 3697.96 examples/s]
 /home/ec7379/.conda/envs/adaptive-attack/lib/python3.10/site-packages/huggingface_hub/utils/_deprecation.py:100: FutureWarning: Deprecated argument(s) used in '__init__': max_seq_length, dataset_text_field. Will not be supported from version '1.0.0'.
 
 Deprecated positional argument(s) used in SFTTrainer, please use the SFTConfig to set these arguments instead.
@@ -12,71 +49,58 @@ Deprecated positional argument(s) used in SFTTrainer, please use the SFTConfig t
   warnings.warn(
 /home/ec7379/.conda/envs/adaptive-attack/lib/python3.10/site-packages/trl/trainer/sft_trainer.py:307: UserWarning: You passed a `dataset_text_field` argument to the SFTTrainer, the value you passed will override the one in the `SFTConfig`.
   warnings.warn(
-Map:   0%|          | 0/100 [00:00<?, ? examples/s]Map: 100%|██████████| 100/100 [00:00<00:00, 4639.56 examples/s]
+/home/ec7379/.conda/envs/adaptive-attack/lib/python3.10/site-packages/transformers/training_args.py:1961: FutureWarning: `--push_to_hub_token` is deprecated and will be removed in version 5 of 🤗 Transformers. Use `--hub_token` instead.
+  warnings.warn(
+/home/ec7379/.conda/envs/adaptive-attack/lib/python3.10/site-packages/trl/trainer/sft_trainer.py:269: UserWarning: You passed a `max_seq_length` argument to the SFTTrainer, the value you passed will override the one in the `SFTConfig`.
+  warnings.warn(
+/home/ec7379/.conda/envs/adaptive-attack/lib/python3.10/site-packages/trl/trainer/sft_trainer.py:307: UserWarning: You passed a `dataset_text_field` argument to the SFTTrainer, the value you passed will override the one in the `SFTConfig`.
+  warnings.warn(
 Detected kernel version 4.18.0, which is below the recommended minimum of 5.5.0; this can cause the process to hang. It is recommended to upgrade the kernel to the minimum version or higher.
-[rank0]: Traceback (most recent call last):
-[rank0]:   File "/scratch/network/ec7379/NLPFinalProject/finetune.py", line 234, in <module>
-[rank0]:     trainer.train()
-[rank0]:   File "/home/ec7379/.conda/envs/adaptive-attack/lib/python3.10/site-packages/trl/trainer/sft_trainer.py", line 440, in train
-[rank0]:     output = super().train(*args, **kwargs)
-[rank0]:   File "/home/ec7379/.conda/envs/adaptive-attack/lib/python3.10/site-packages/transformers/trainer.py", line 1932, in train
-[rank0]:     return inner_training_loop(
-[rank0]:   File "/home/ec7379/.conda/envs/adaptive-attack/lib/python3.10/site-packages/transformers/trainer.py", line 2089, in _inner_training_loop
-[rank0]:     model, self.optimizer = self.accelerator.prepare(self.model, self.optimizer)
-[rank0]:   File "/home/ec7379/.conda/envs/adaptive-attack/lib/python3.10/site-packages/accelerate/accelerator.py", line 1296, in prepare
-[rank0]:     result = self._prepare_deepspeed(*args)
-[rank0]:   File "/home/ec7379/.conda/envs/adaptive-attack/lib/python3.10/site-packages/accelerate/accelerator.py", line 1771, in _prepare_deepspeed
-[rank0]:     engine, optimizer, _, lr_scheduler = deepspeed.initialize(**kwargs)
-[rank0]:   File "/home/ec7379/.conda/envs/adaptive-attack/lib/python3.10/site-packages/deepspeed/__init__.py", line 181, in initialize
-[rank0]:     engine = DeepSpeedEngine(args=args,
-[rank0]:   File "/home/ec7379/.conda/envs/adaptive-attack/lib/python3.10/site-packages/deepspeed/runtime/engine.py", line 306, in __init__
-[rank0]:     self._configure_optimizer(optimizer, model_parameters)
-[rank0]:   File "/home/ec7379/.conda/envs/adaptive-attack/lib/python3.10/site-packages/deepspeed/runtime/engine.py", line 1249, in _configure_optimizer
-[rank0]:     self.optimizer = self._configure_zero_optimizer(basic_optimizer)
-[rank0]:   File "/home/ec7379/.conda/envs/adaptive-attack/lib/python3.10/site-packages/deepspeed/runtime/engine.py", line 1573, in _configure_zero_optimizer
-[rank0]:     optimizer = DeepSpeedZeroOptimizer_Stage3(
-[rank0]:   File "/home/ec7379/.conda/envs/adaptive-attack/lib/python3.10/site-packages/deepspeed/runtime/zero/stage3.py", line 362, in __init__
-[rank0]:     self._setup_for_real_optimizer()
-[rank0]:   File "/home/ec7379/.conda/envs/adaptive-attack/lib/python3.10/site-packages/deepspeed/runtime/zero/stage3.py", line 472, in _setup_for_real_optimizer
-[rank0]:     self._create_fp32_partitions()
-[rank0]:   File "/home/ec7379/.conda/envs/adaptive-attack/lib/python3.10/site-packages/deepspeed/runtime/zero/stage3.py", line 864, in _create_fp32_partitions
-[rank0]:     self.device).clone().float().detach())
-[rank0]: torch.cuda.OutOfMemoryError: CUDA out of memory. Tried to allocate 3.77 GiB. GPU 
-E0405 20:30:44.633000 23371033416704 torch/distributed/elastic/multiprocessing/api.py:826] failed (exitcode: 1) local_rank: 0 (pid: 3423488) of binary: /home/ec7379/.conda/envs/adaptive-attack/bin/python
-Traceback (most recent call last):
-  File "/home/ec7379/.conda/envs/adaptive-attack/bin/accelerate", line 8, in <module>
-    sys.exit(main())
-  File "/home/ec7379/.conda/envs/adaptive-attack/lib/python3.10/site-packages/accelerate/commands/accelerate_cli.py", line 48, in main
-    args.func(args)
-  File "/home/ec7379/.conda/envs/adaptive-attack/lib/python3.10/site-packages/accelerate/commands/launch.py", line 1082, in launch_command
-    deepspeed_launcher(args)
-  File "/home/ec7379/.conda/envs/adaptive-attack/lib/python3.10/site-packages/accelerate/commands/launch.py", line 786, in deepspeed_launcher
-    distrib_run.run(args)
-  File "/home/ec7379/.conda/envs/adaptive-attack/lib/python3.10/site-packages/torch/distributed/run.py", line 870, in run
-    elastic_launch(
-  File "/home/ec7379/.conda/envs/adaptive-attack/lib/python3.10/site-packages/torch/distributed/launcher/api.py", line 132, in __call__
-    return launch_agent(self._config, self._entrypoint, list(args))
-  File "/home/ec7379/.conda/envs/adaptive-attack/lib/python3.10/site-packages/torch/distributed/launcher/api.py", line 263, in launch_agent
-    raise ChildFailedError(
-torch.distributed.elastic.multiprocessing.errors.ChildFailedError: 
-============================================================
-finetune.py FAILED
-------------------------------------------------------------
-Failures:
-  <NO_OTHER_FAILURES>
-------------------------------------------------------------
-Root Cause (first observed failure):
-[0]:
-  time      : 2025-04-05_20:30:44
-  host      : adroit-h11g2
-  rank      : 0 (local_rank: 0)
-  exitcode  : 1 (pid: 3423488)
-  error_file: <N/A>
-  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
-============================================================
-Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:  50%|█████     | 1/2 [00:04<00:04,  4.57s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:06<00:00,  2.82s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:06<00:00,  3.08s/it]
-Map:   0%|          | 0/100 [00:00<?, ? examples/s]Map: 100%|██████████| 100/100 [00:00<00:00, 11821.93 examples/s]
-Map:   0%|          | 0/100 [00:00<?, ? examples/s]Map: 100%|██████████| 100/100 [00:00<00:00, 2247.49 examples/s]
+Map:   0%|          | 0/100 [00:00<?, ? examples/s]Map:   0%|          | 0/100 [00:00<?, ? examples/s]Map:   0%|          | 0/100 [00:00<?, ? examples/s]Map: 100%|██████████| 100/100 [00:00<00:00, 4556.40 examples/s]
+Map: 100%|██████████| 100/100 [00:00<00:00, 3813.87 examples/s]
+Map: 100%|██████████| 100/100 [00:00<00:00, 3443.34 examples/s]
+  0%|          | 0/50 [00:00<?, ?it/s]  2%|▏         | 1/50 [00:03<02:49,  3.45s/it]                                                2%|▏         | 1/50 [00:03<02:49,  3.45s/it]  4%|▍         | 2/50 [00:05<02:12,  2.76s/it]                                                4%|▍         | 2/50 [00:05<02:12,  2.76s/it]  6%|▌         | 3/50 [00:07<01:58,  2.52s/it]                                                6%|▌         | 3/50 [00:07<01:58,  2.52s/it]  8%|▊         | 4/50 [00:10<01:50,  2.40s/it]                                                8%|▊         | 4/50 [00:10<01:50,  2.40s/it] 10%|█         | 5/50 [00:12<01:45,  2.34s/it]                                               10%|█         | 5/50 [00:12<01:45,  2.34s/it] 12%|█▏        | 6/50 [00:14<01:41,  2.30s/it]                                               12%|█▏        | 6/50 [00:14<01:41,  2.30s/it] 14%|█▍        | 7/50 [00:16<01:38,  2.29s/it]                                               14%|█▍        | 7/50 [00:16<01:38,  2.29s/it] 16%|█▌        | 8/50 [00:19<01:34,  2.25s/it]                                               16%|█▌        | 8/50 [00:19<01:34,  2.25s/it] 18%|█▊        | 9/50 [00:21<01:32,  2.25s/it]                                               18%|█▊        | 9/50 [00:21<01:32,  2.25s/it] 20%|██        | 10/50 [00:23<01:29,  2.25s/it]                                                20%|██        | 10/50 [00:23<01:29,  2.25s/it] 22%|██▏       | 11/50 [00:25<01:27,  2.25s/it]                                                22%|██▏       | 11/50 [00:25<01:27,  2.25s/it] 24%|██▍       | 12/50 [00:28<01:25,  2.24s/it]                                                24%|██▍       | 12/50 [00:28<01:25,  2.24s/it] 26%|██▌       | 13/50 [00:30<01:23,  2.25s/it]                                                26%|██▌       | 13/50 [00:30<01:23,  2.25s/it] 28%|██▊       | 14/50 [00:32<01:20,  2.24s/it]                                                28%|██▊       | 14/50 [00:32<01:20,  2.24s/it] 30%|███       | 15/50 [00:34<01:18,  2.24s/it]                                                30%|███       | 15/50 [00:34<01:18,  2.24s/it] 32%|███▏      | 16/50 [00:37<01:17,  2.28s/it]                                                32%|███▏      | 16/50 [00:37<01:17,  2.28s/it] 34%|███▍      | 17/50 [00:39<01:14,  2.27s/it]                                                34%|███▍      | 17/50 [00:39<01:14,  2.27s/it] 36%|███▌      | 18/50 [00:41<01:12,  2.26s/it]                                                36%|███▌      | 18/50 [00:41<01:12,  2.26s/it] 38%|███▊      | 19/50 [00:43<01:10,  2.28s/it]                                                38%|███▊      | 19/50 [00:43<01:10,  2.28s/it] 40%|████      | 20/50 [00:46<01:07,  2.27s/it]                                                40%|████      | 20/50 [00:46<01:07,  2.27s/it] 42%|████▏     | 21/50 [00:48<01:05,  2.27s/it]                                                42%|████▏     | 21/50 [00:48<01:05,  2.27s/it] 44%|████▍     | 22/50 [00:50<01:03,  2.26s/it]                                                44%|████▍     | 22/50 [00:50<01:03,  2.26s/it] 46%|████▌     | 23/50 [00:52<01:01,  2.26s/it]                                                46%|████▌     | 23/50 [00:52<01:01,  2.26s/it] 48%|████▊     | 24/50 [00:55<00:58,  2.27s/it]                                                48%|████▊     | 24/50 [00:55<00:58,  2.27s/it] 50%|█████     | 25/50 [00:57<00:56,  2.27s/it]                                                50%|█████     | 25/50 [00:57<00:56,  2.27s/it] 52%|█████▏    | 26/50 [00:59<00:54,  2.27s/it]                                                52%|█████▏    | 26/50 [00:59<00:54,  2.27s/it] 54%|█████▍    | 27/50 [01:02<00:52,  2.27s/it]                                                54%|█████▍    | 27/50 [01:02<00:52,  2.27s/it] 56%|█████▌    | 28/50 [01:04<00:49,  2.27s/it]                                                56%|█████▌    | 28/50 [01:04<00:49,  2.27s/it] 58%|█████▊    | 29/50 [01:06<00:47,  2.27s/it]                                                58%|█████▊    | 29/50 [01:06<00:47,  2.27s/it] 60%|██████    | 30/50 [01:08<00:45,  2.26s/it]                                                60%|██████    | 30/50 [01:08<00:45,  2.26s/it] 62%|██████▏   | 31/50 [01:11<00:42,  2.26s/it]                                                62%|██████▏   | 31/50 [01:11<00:42,  2.26s/it] 64%|██████▍   | 32/50 [01:13<00:40,  2.27s/it]                                                64%|██████▍   | 32/50 [01:13<00:40,  2.27s/it] 66%|██████▌   | 33/50 [01:15<00:38,  2.26s/it]                                                66%|██████▌   | 33/50 [01:15<00:38,  2.26s/it] 68%|██████▊   | 34/50 [01:17<00:36,  2.25s/it]                                                68%|██████▊   | 34/50 [01:17<00:36,  2.25s/it] 70%|███████   | 35/50 [01:20<00:33,  2.26s/it]                                                70%|███████   | 35/50 [01:20<00:33,  2.26s/it] 72%|███████▏  | 36/50 [01:22<00:31,  2.25s/it]                                                72%|███████▏  | 36/50 [01:22<00:31,  2.25s/it] 74%|███████▍  | 37/50 [01:24<00:29,  2.26s/it]                                                74%|███████▍  | 37/50 [01:24<00:29,  2.26s/it] 76%|███████▌  | 38/50 [01:26<00:27,  2.29s/it]                                                76%|███████▌  | 38/50 [01:26<00:27,  2.29s/it] 78%|███████▊  | 39/50 [01:29<00:25,  2.28s/it]                                                78%|███████▊  | 39/50 [01:29<00:25,  2.28s/it] 80%|████████  | 40/50 [01:31<00:22,  2.28s/it]                                                80%|████████  | 40/50 [01:31<00:22,  2.28s/it] 82%|████████▏ | 41/50 [01:33<00:20,  2.27s/it]                                                82%|████████▏ | 41/50 [01:33<00:20,  2.27s/it] 84%|████████▍ | 42/50 [01:36<00:18,  2.27s/it]                                                84%|████████▍ | 42/50 [01:36<00:18,  2.27s/it] 86%|████████▌ | 43/50 [01:38<00:15,  2.26s/it]                                                86%|████████▌ | 43/50 [01:38<00:15,  2.26s/it] 88%|████████▊ | 44/50 [01:40<00:13,  2.26s/it]                                                88%|████████▊ | 44/50 [01:40<00:13,  2.26s/it] 90%|█████████ | 45/50 [01:42<00:11,  2.28s/it]                                                90%|█████████ | 45/50 [01:42<00:11,  2.28s/it] 92%|█████████▏| 46/50 [01:45<00:09,  2.28s/it]                                                92%|█████████▏| 46/50 [01:45<00:09,  2.28s/it] 94%|█████████▍| 47/50 [01:47<00:06,  2.28s/it]                                                94%|█████████▍| 47/50 [01:47<00:06,  2.28s/it] 96%|█████████▌| 48/50 [01:49<00:04,  2.28s/it]                                                96%|█████████▌| 48/50 [01:49<00:04,  2.28s/it] 98%|█████████▊| 49/50 [01:51<00:02,  2.28s/it]                                                98%|█████████▊| 49/50 [01:51<00:02,  2.28s/it]100%|██████████| 50/50 [01:54<00:00,  2.27s/it]                                               100%|██████████| 50/50 [01:54<00:00,  2.27s/it]                                               100%|██████████| 50/50 [01:54<00:00,  2.27s/it]100%|██████████| 50/50 [01:54<00:00,  2.28s/it]
+W0409 20:24:22.359000 23047797621760 torch/distributed/run.py:757] 
+W0409 20:24:22.359000 23047797621760 torch/distributed/run.py:757] *****************************************
+W0409 20:24:22.359000 23047797621760 torch/distributed/run.py:757] Setting OMP_NUM_THREADS environment variable for each process to be 1 in default, to avoid your system being overloaded, please further tune the variable for optimal performance in your application as needed. 
+W0409 20:24:22.359000 23047797621760 torch/distributed/run.py:757] *****************************************
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:  50%|█████     | 1/2 [00:01<00:01,  1.97s/it]Loading checkpoint shards:  50%|█████     | 1/2 [00:01<00:01,  1.99s/it]Loading checkpoint shards:  50%|█████     | 1/2 [00:01<00:01,  1.99s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:04<00:00,  2.07s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:04<00:00,  2.06s/it]
+Loading checkpoint shards: 100%|██████████| 2/2 [00:04<00:00,  2.08s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:04<00:00,  2.07s/it]
+Loading checkpoint shards: 100%|██████████| 2/2 [00:04<00:00,  2.09s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:04<00:00,  2.07s/it]
+Loading checkpoint shards:  50%|█████     | 1/2 [00:07<00:07,  7.20s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:09<00:00,  4.42s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:09<00:00,  4.84s/it]
+Map:   0%|          | 0/100 [00:00<?, ? examples/s]Map: 100%|██████████| 100/100 [00:00<00:00, 18090.59 examples/s]
+Map:   0%|          | 0/100 [00:00<?, ? examples/s]Map: 100%|██████████| 100/100 [00:00<00:00, 3619.90 examples/s]
+/home/ec7379/.conda/envs/adaptive-attack/lib/python3.10/site-packages/huggingface_hub/utils/_deprecation.py:100: FutureWarning: Deprecated argument(s) used in '__init__': max_seq_length, dataset_text_field. Will not be supported from version '1.0.0'.
+
+Deprecated positional argument(s) used in SFTTrainer, please use the SFTConfig to set these arguments instead.
+  warnings.warn(message, FutureWarning)
+Map:   0%|          | 0/100 [00:00<?, ? examples/s]Map:   0%|          | 0/100 [00:00<?, ? examples/s]Map: 100%|██████████| 100/100 [00:00<00:00, 16985.80 examples/s]
+Map: 100%|██████████| 100/100 [00:00<00:00, 17514.95 examples/s]
+Map:   0%|          | 0/100 [00:00<?, ? examples/s]Map:   0%|          | 0/100 [00:00<?, ? examples/s]/home/ec7379/.conda/envs/adaptive-attack/lib/python3.10/site-packages/transformers/training_args.py:1961: FutureWarning: `--push_to_hub_token` is deprecated and will be removed in version 5 of 🤗 Transformers. Use `--hub_token` instead.
+  warnings.warn(
+/home/ec7379/.conda/envs/adaptive-attack/lib/python3.10/site-packages/trl/trainer/sft_trainer.py:269: UserWarning: You passed a `max_seq_length` argument to the SFTTrainer, the value you passed will override the one in the `SFTConfig`.
+  warnings.warn(
+/home/ec7379/.conda/envs/adaptive-attack/lib/python3.10/site-packages/trl/trainer/sft_trainer.py:307: UserWarning: You passed a `dataset_text_field` argument to the SFTTrainer, the value you passed will override the one in the `SFTConfig`.
+  warnings.warn(
+Map:   0%|          | 0/100 [00:00<?, ? examples/s]Map: 100%|██████████| 100/100 [00:00<00:00, 3625.72 examples/s]
+Map: 100%|██████████| 100/100 [00:00<00:00, 3495.34 examples/s]
+/home/ec7379/.conda/envs/adaptive-attack/lib/python3.10/site-packages/huggingface_hub/utils/_deprecation.py:100: FutureWarning: Deprecated argument(s) used in '__init__': max_seq_length, dataset_text_field. Will not be supported from version '1.0.0'.
+
+Deprecated positional argument(s) used in SFTTrainer, please use the SFTConfig to set these arguments instead.
+  warnings.warn(message, FutureWarning)
+/home/ec7379/.conda/envs/adaptive-attack/lib/python3.10/site-packages/huggingface_hub/utils/_deprecation.py:100: FutureWarning: Deprecated argument(s) used in '__init__': max_seq_length, dataset_text_field. Will not be supported from version '1.0.0'.
+
+Deprecated positional argument(s) used in SFTTrainer, please use the SFTConfig to set these arguments instead.
+  warnings.warn(message, FutureWarning)
+Map: 100%|██████████| 100/100 [00:00<00:00, 16529.93 examples/s]
+Map:   0%|          | 0/100 [00:00<?, ? examples/s]Map:   0%|          | 0/100 [00:00<?, ? examples/s]Map: 100%|██████████| 100/100 [00:00<00:00, 4248.39 examples/s]
+/home/ec7379/.conda/envs/adaptive-attack/lib/python3.10/site-packages/transformers/training_args.py:1961: FutureWarning: `--push_to_hub_token` is deprecated and will be removed in version 5 of 🤗 Transformers. Use `--hub_token` instead.
+  warnings.warn(
+/home/ec7379/.conda/envs/adaptive-attack/lib/python3.10/site-packages/trl/trainer/sft_trainer.py:269: UserWarning: You passed a `max_seq_length` argument to the SFTTrainer, the value you passed will override the one in the `SFTConfig`.
+  warnings.warn(
+/home/ec7379/.conda/envs/adaptive-attack/lib/python3.10/site-packages/trl/trainer/sft_trainer.py:307: UserWarning: You passed a `dataset_text_field` argument to the SFTTrainer, the value you passed will override the one in the `SFTConfig`.
+  warnings.warn(
+Map: 100%|██████████| 100/100 [00:00<00:00, 3655.45 examples/s]
 /home/ec7379/.conda/envs/adaptive-attack/lib/python3.10/site-packages/huggingface_hub/utils/_deprecation.py:100: FutureWarning: Deprecated argument(s) used in '__init__': max_seq_length, dataset_text_field. Will not be supported from version '1.0.0'.
 
 Deprecated positional argument(s) used in SFTTrainer, please use the SFTConfig to set these arguments instead.
@@ -87,71 +111,34 @@ Deprecated positional argument(s) used in SFTTrainer, please use the SFTConfig t
   warnings.warn(
 /home/ec7379/.conda/envs/adaptive-attack/lib/python3.10/site-packages/trl/trainer/sft_trainer.py:307: UserWarning: You passed a `dataset_text_field` argument to the SFTTrainer, the value you passed will override the one in the `SFTConfig`.
   warnings.warn(
-Map:   0%|          | 0/100 [00:00<?, ? examples/s]Map: 100%|██████████| 100/100 [00:00<00:00, 4225.02 examples/s]
+/home/ec7379/.conda/envs/adaptive-attack/lib/python3.10/site-packages/transformers/training_args.py:1961: FutureWarning: `--push_to_hub_token` is deprecated and will be removed in version 5 of 🤗 Transformers. Use `--hub_token` instead.
+  warnings.warn(
+/home/ec7379/.conda/envs/adaptive-attack/lib/python3.10/site-packages/trl/trainer/sft_trainer.py:269: UserWarning: You passed a `max_seq_length` argument to the SFTTrainer, the value you passed will override the one in the `SFTConfig`.
+  warnings.warn(
+/home/ec7379/.conda/envs/adaptive-attack/lib/python3.10/site-packages/trl/trainer/sft_trainer.py:307: UserWarning: You passed a `dataset_text_field` argument to the SFTTrainer, the value you passed will override the one in the `SFTConfig`.
+  warnings.warn(
 Detected kernel version 4.18.0, which is below the recommended minimum of 5.5.0; this can cause the process to hang. It is recommended to upgrade the kernel to the minimum version or higher.
-[rank0]: Traceback (most recent call last):
-[rank0]:   File "/scratch/network/ec7379/NLPFinalProject/finetune.py", line 234, in <module>
-[rank0]:     trainer.train()
-[rank0]:   File "/home/ec7379/.conda/envs/adaptive-attack/lib/python3.10/site-packages/trl/trainer/sft_trainer.py", line 440, in train
-[rank0]:     output = super().train(*args, **kwargs)
-[rank0]:   File "/home/ec7379/.conda/envs/adaptive-attack/lib/python3.10/site-packages/transformers/trainer.py", line 1932, in train
-[rank0]:     return inner_training_loop(
-[rank0]:   File "/home/ec7379/.conda/envs/adaptive-attack/lib/python3.10/site-packages/transformers/trainer.py", line 2089, in _inner_training_loop
-[rank0]:     model, self.optimizer = self.accelerator.prepare(self.model, self.optimizer)
-[rank0]:   File "/home/ec7379/.conda/envs/adaptive-attack/lib/python3.10/site-packages/accelerate/accelerator.py", line 1296, in prepare
-[rank0]:     result = self._prepare_deepspeed(*args)
-[rank0]:   File "/home/ec7379/.conda/envs/adaptive-attack/lib/python3.10/site-packages/accelerate/accelerator.py", line 1771, in _prepare_deepspeed
-[rank0]:     engine, optimizer, _, lr_scheduler = deepspeed.initialize(**kwargs)
-[rank0]:   File "/home/ec7379/.conda/envs/adaptive-attack/lib/python3.10/site-packages/deepspeed/__init__.py", line 181, in initialize
-[rank0]:     engine = DeepSpeedEngine(args=args,
-[rank0]:   File "/home/ec7379/.conda/envs/adaptive-attack/lib/python3.10/site-packages/deepspeed/runtime/engine.py", line 306, in __init__
-[rank0]:     self._configure_optimizer(optimizer, model_parameters)
-[rank0]:   File "/home/ec7379/.conda/envs/adaptive-attack/lib/python3.10/site-packages/deepspeed/runtime/engine.py", line 1249, in _configure_optimizer
-[rank0]:     self.optimizer = self._configure_zero_optimizer(basic_optimizer)
-[rank0]:   File "/home/ec7379/.conda/envs/adaptive-attack/lib/python3.10/site-packages/deepspeed/runtime/engine.py", line 1573, in _configure_zero_optimizer
-[rank0]:     optimizer = DeepSpeedZeroOptimizer_Stage3(
-[rank0]:   File "/home/ec7379/.conda/envs/adaptive-attack/lib/python3.10/site-packages/deepspeed/runtime/zero/stage3.py", line 362, in __init__
-[rank0]:     self._setup_for_real_optimizer()
-[rank0]:   File "/home/ec7379/.conda/envs/adaptive-attack/lib/python3.10/site-packages/deepspeed/runtime/zero/stage3.py", line 472, in _setup_for_real_optimizer
-[rank0]:     self._create_fp32_partitions()
-[rank0]:   File "/home/ec7379/.conda/envs/adaptive-attack/lib/python3.10/site-packages/deepspeed/runtime/zero/stage3.py", line 864, in _create_fp32_partitions
-[rank0]:     self.device).clone().float().detach())
-[rank0]: torch.cuda.OutOfMemoryError: CUDA out of memory. Tried to allocate 3.77 GiB. GPU 
-E0405 20:31:09.572000 22861235512320 torch/distributed/elastic/multiprocessing/api.py:826] failed (exitcode: 1) local_rank: 0 (pid: 3423784) of binary: /home/ec7379/.conda/envs/adaptive-attack/bin/python
-Traceback (most recent call last):
-  File "/home/ec7379/.conda/envs/adaptive-attack/bin/accelerate", line 8, in <module>
-    sys.exit(main())
-  File "/home/ec7379/.conda/envs/adaptive-attack/lib/python3.10/site-packages/accelerate/commands/accelerate_cli.py", line 48, in main
-    args.func(args)
-  File "/home/ec7379/.conda/envs/adaptive-attack/lib/python3.10/site-packages/accelerate/commands/launch.py", line 1082, in launch_command
-    deepspeed_launcher(args)
-  File "/home/ec7379/.conda/envs/adaptive-attack/lib/python3.10/site-packages/accelerate/commands/launch.py", line 786, in deepspeed_launcher
-    distrib_run.run(args)
-  File "/home/ec7379/.conda/envs/adaptive-attack/lib/python3.10/site-packages/torch/distributed/run.py", line 870, in run
-    elastic_launch(
-  File "/home/ec7379/.conda/envs/adaptive-attack/lib/python3.10/site-packages/torch/distributed/launcher/api.py", line 132, in __call__
-    return launch_agent(self._config, self._entrypoint, list(args))
-  File "/home/ec7379/.conda/envs/adaptive-attack/lib/python3.10/site-packages/torch/distributed/launcher/api.py", line 263, in launch_agent
-    raise ChildFailedError(
-torch.distributed.elastic.multiprocessing.errors.ChildFailedError: 
-============================================================
-finetune.py FAILED
-------------------------------------------------------------
-Failures:
-  <NO_OTHER_FAILURES>
-------------------------------------------------------------
-Root Cause (first observed failure):
-[0]:
-  time      : 2025-04-05_20:31:09
-  host      : adroit-h11g2
-  rank      : 0 (local_rank: 0)
-  exitcode  : 1 (pid: 3423784)
-  error_file: <N/A>
-  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
-============================================================
-Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:  50%|█████     | 1/2 [00:04<00:04,  4.53s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:06<00:00,  2.91s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:06<00:00,  3.15s/it]
-Map:   0%|          | 0/100 [00:00<?, ? examples/s]Map: 100%|██████████| 100/100 [00:00<00:00, 7986.87 examples/s]
-Map:   0%|          | 0/100 [00:00<?, ? examples/s]Map: 100%|██████████| 100/100 [00:00<00:00, 1882.77 examples/s]
+Map:   0%|          | 0/100 [00:00<?, ? examples/s]Map:   0%|          | 0/100 [00:00<?, ? examples/s]Map:   0%|          | 0/100 [00:00<?, ? examples/s]Map: 100%|██████████| 100/100 [00:00<00:00, 4903.27 examples/s]
+Map: 100%|██████████| 100/100 [00:00<00:00, 4826.64 examples/s]
+Map: 100%|██████████| 100/100 [00:00<00:00, 4817.50 examples/s]
+  0%|          | 0/50 [00:00<?, ?it/s]  2%|▏         | 1/50 [00:03<02:48,  3.43s/it]                                                2%|▏         | 1/50 [00:03<02:48,  3.43s/it]  4%|▍         | 2/50 [00:05<02:11,  2.74s/it]                                                4%|▍         | 2/50 [00:05<02:11,  2.74s/it]  6%|▌         | 3/50 [00:07<01:58,  2.53s/it]                                                6%|▌         | 3/50 [00:07<01:58,  2.53s/it]  8%|▊         | 4/50 [00:10<01:51,  2.42s/it]                                                8%|▊         | 4/50 [00:10<01:51,  2.42s/it] 10%|█         | 5/50 [00:12<01:45,  2.35s/it]                                               10%|█         | 5/50 [00:12<01:45,  2.35s/it] 12%|█▏        | 6/50 [00:14<01:42,  2.33s/it]                                               12%|█▏        | 6/50 [00:14<01:42,  2.33s/it] 14%|█▍        | 7/50 [00:17<01:39,  2.31s/it]                                               14%|█▍        | 7/50 [00:17<01:39,  2.31s/it] 16%|█▌        | 8/50 [00:19<01:35,  2.27s/it]                                               16%|█▌        | 8/50 [00:19<01:35,  2.27s/it] 18%|█▊        | 9/50 [00:21<01:33,  2.27s/it]                                               18%|█▊        | 9/50 [00:21<01:33,  2.27s/it] 20%|██        | 10/50 [00:23<01:30,  2.27s/it]                                                20%|██        | 10/50 [00:23<01:30,  2.27s/it] 22%|██▏       | 11/50 [00:26<01:28,  2.28s/it]                                                22%|██▏       | 11/50 [00:26<01:28,  2.28s/it] 24%|██▍       | 12/50 [00:28<01:26,  2.27s/it]                                                24%|██▍       | 12/50 [00:28<01:26,  2.27s/it] 26%|██▌       | 13/50 [00:30<01:24,  2.27s/it]                                                26%|██▌       | 13/50 [00:30<01:24,  2.27s/it] 28%|██▊       | 14/50 [00:32<01:21,  2.26s/it]                                                28%|██▊       | 14/50 [00:32<01:21,  2.26s/it] 30%|███       | 15/50 [00:35<01:19,  2.26s/it]                                                30%|███       | 15/50 [00:35<01:19,  2.26s/it] 32%|███▏      | 16/50 [00:37<01:18,  2.30s/it]                                                32%|███▏      | 16/50 [00:37<01:18,  2.30s/it] 34%|███▍      | 17/50 [00:39<01:15,  2.29s/it]                                                34%|███▍      | 17/50 [00:39<01:15,  2.29s/it] 36%|███▌      | 18/50 [00:41<01:12,  2.28s/it]                                                36%|███▌      | 18/50 [00:41<01:12,  2.28s/it] 38%|███▊      | 19/50 [00:44<01:11,  2.30s/it]                                                38%|███▊      | 19/50 [00:44<01:11,  2.30s/it] 40%|████      | 20/50 [00:46<01:08,  2.29s/it]                                                40%|████      | 20/50 [00:46<01:08,  2.29s/it] 42%|████▏     | 21/50 [00:48<01:06,  2.29s/it]                                                42%|████▏     | 21/50 [00:48<01:06,  2.29s/it] 44%|████▍     | 22/50 [00:51<01:03,  2.28s/it]                                                44%|████▍     | 22/50 [00:51<01:03,  2.28s/it] 46%|████▌     | 23/50 [00:53<01:01,  2.28s/it]                                                46%|████▌     | 23/50 [00:53<01:01,  2.28s/it] 48%|████▊     | 24/50 [00:55<00:59,  2.28s/it]                                                48%|████▊     | 24/50 [00:55<00:59,  2.28s/it] 50%|█████     | 25/50 [00:58<00:57,  2.29s/it]                                                50%|█████     | 25/50 [00:58<00:57,  2.29s/it] 52%|█████▏    | 26/50 [01:00<00:54,  2.29s/it]                                                52%|█████▏    | 26/50 [01:00<00:54,  2.29s/it] 54%|█████▍    | 27/50 [01:02<00:52,  2.29s/it]                                                54%|█████▍    | 27/50 [01:02<00:52,  2.29s/it] 56%|█████▌    | 28/50 [01:04<00:50,  2.28s/it]                                                56%|█████▌    | 28/50 [01:04<00:50,  2.28s/it] 58%|█████▊    | 29/50 [01:07<00:48,  2.29s/it]                                                58%|█████▊    | 29/50 [01:07<00:48,  2.29s/it] 60%|██████    | 30/50 [01:09<00:45,  2.28s/it]                                                60%|██████    | 30/50 [01:09<00:45,  2.28s/it] 62%|██████▏   | 31/50 [01:11<00:43,  2.28s/it]                                                62%|██████▏   | 31/50 [01:11<00:43,  2.28s/it] 64%|██████▍   | 32/50 [01:13<00:41,  2.28s/it]                                                64%|██████▍   | 32/50 [01:13<00:41,  2.28s/it] 66%|██████▌   | 33/50 [01:16<00:38,  2.28s/it]                                                66%|██████▌   | 33/50 [01:16<00:38,  2.28s/it] 68%|██████▊   | 34/50 [01:18<00:36,  2.27s/it]                                                68%|██████▊   | 34/50 [01:18<00:36,  2.27s/it] 70%|███████   | 35/50 [01:20<00:34,  2.27s/it]                                                70%|███████   | 35/50 [01:20<00:34,  2.27s/it] 72%|███████▏  | 36/50 [01:23<00:31,  2.27s/it]                                                72%|███████▏  | 36/50 [01:23<00:31,  2.27s/it] 74%|███████▍  | 37/50 [01:25<00:29,  2.28s/it]                                                74%|███████▍  | 37/50 [01:25<00:29,  2.28s/it] 76%|███████▌  | 38/50 [01:27<00:27,  2.30s/it]                                                76%|███████▌  | 38/50 [01:27<00:27,  2.30s/it] 78%|███████▊  | 39/50 [01:29<00:25,  2.30s/it]                                                78%|███████▊  | 39/50 [01:29<00:25,  2.30s/it] 80%|████████  | 40/50 [01:32<00:22,  2.30s/it]                                                80%|████████  | 40/50 [01:32<00:22,  2.30s/it] 82%|████████▏ | 41/50 [01:34<00:20,  2.29s/it]                                                82%|████████▏ | 41/50 [01:34<00:20,  2.29s/it] 84%|████████▍ | 42/50 [01:36<00:18,  2.28s/it]                                                84%|████████▍ | 42/50 [01:36<00:18,  2.28s/it] 86%|████████▌ | 43/50 [01:39<00:15,  2.28s/it]                                                86%|████████▌ | 43/50 [01:39<00:15,  2.28s/it] 88%|████████▊ | 44/50 [01:41<00:13,  2.28s/it]                                                88%|████████▊ | 44/50 [01:41<00:13,  2.28s/it] 90%|█████████ | 45/50 [01:43<00:11,  2.30s/it]                                                90%|█████████ | 45/50 [01:43<00:11,  2.30s/it] 92%|█████████▏| 46/50 [01:46<00:09,  2.30s/it]                                                92%|█████████▏| 46/50 [01:46<00:09,  2.30s/it] 94%|█████████▍| 47/50 [01:48<00:06,  2.29s/it]                                                94%|█████████▍| 47/50 [01:48<00:06,  2.29s/it] 96%|█████████▌| 48/50 [01:50<00:04,  2.29s/it]                                                96%|█████████▌| 48/50 [01:50<00:04,  2.29s/it] 98%|█████████▊| 49/50 [01:52<00:02,  2.29s/it]                                                98%|█████████▊| 49/50 [01:52<00:02,  2.29s/it]100%|██████████| 50/50 [01:55<00:00,  2.29s/it]                                               100%|██████████| 50/50 [01:55<00:00,  2.29s/it]                                               100%|██████████| 50/50 [01:55<00:00,  2.29s/it]100%|██████████| 50/50 [01:55<00:00,  2.30s/it]
+W0409 20:26:49.918000 23394314167296 torch/distributed/run.py:757] 
+W0409 20:26:49.918000 23394314167296 torch/distributed/run.py:757] *****************************************
+W0409 20:26:49.918000 23394314167296 torch/distributed/run.py:757] Setting OMP_NUM_THREADS environment variable for each process to be 1 in default, to avoid your system being overloaded, please further tune the variable for optimal performance in your application as needed. 
+W0409 20:26:49.918000 23394314167296 torch/distributed/run.py:757] *****************************************
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:  50%|█████     | 1/2 [00:01<00:01,  1.95s/it]Loading checkpoint shards:  50%|█████     | 1/2 [00:01<00:01,  1.96s/it]Loading checkpoint shards:  50%|█████     | 1/2 [00:01<00:01,  1.97s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:04<00:00,  2.07s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:04<00:00,  2.06s/it]
+Loading checkpoint shards: 100%|██████████| 2/2 [00:04<00:00,  2.08s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:04<00:00,  2.06s/it]
+Loading checkpoint shards: 100%|██████████| 2/2 [00:04<00:00,  2.09s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:04<00:00,  2.07s/it]
+Loading checkpoint shards:  50%|█████     | 1/2 [00:07<00:07,  7.20s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:09<00:00,  4.40s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:09<00:00,  4.82s/it]
+Map:   0%|          | 0/100 [00:00<?, ? examples/s]Map: 100%|██████████| 100/100 [00:00<00:00, 17362.69 examples/s]
+Map:   0%|          | 0/100 [00:00<?, ? examples/s]Map: 100%|██████████| 100/100 [00:00<00:00, 3573.36 examples/s]
+/home/ec7379/.conda/envs/adaptive-attack/lib/python3.10/site-packages/huggingface_hub/utils/_deprecation.py:100: FutureWarning: Deprecated argument(s) used in '__init__': max_seq_length, dataset_text_field. Will not be supported from version '1.0.0'.
+
+Deprecated positional argument(s) used in SFTTrainer, please use the SFTConfig to set these arguments instead.
+  warnings.warn(message, FutureWarning)
+Map:   0%|          | 0/100 [00:00<?, ? examples/s]Map:   0%|          | 0/100 [00:00<?, ? examples/s]Map: 100%|██████████| 100/100 [00:00<00:00, 17201.05 examples/s]
+Map: 100%|██████████| 100/100 [00:00<00:00, 17732.65 examples/s]
+Map:   0%|          | 0/100 [00:00<?, ? examples/s]Map:   0%|          | 0/100 [00:00<?, ? examples/s]Map: 100%|██████████| 100/100 [00:00<00:00, 3548.60 examples/s]
 /home/ec7379/.conda/envs/adaptive-attack/lib/python3.10/site-packages/huggingface_hub/utils/_deprecation.py:100: FutureWarning: Deprecated argument(s) used in '__init__': max_seq_length, dataset_text_field. Will not be supported from version '1.0.0'.
 
 Deprecated positional argument(s) used in SFTTrainer, please use the SFTConfig to set these arguments instead.
@@ -162,71 +149,20 @@ Deprecated positional argument(s) used in SFTTrainer, please use the SFTConfig t
   warnings.warn(
 /home/ec7379/.conda/envs/adaptive-attack/lib/python3.10/site-packages/trl/trainer/sft_trainer.py:307: UserWarning: You passed a `dataset_text_field` argument to the SFTTrainer, the value you passed will override the one in the `SFTConfig`.
   warnings.warn(
-Map:   0%|          | 0/100 [00:00<?, ? examples/s]Map: 100%|██████████| 100/100 [00:00<00:00, 6674.90 examples/s]
-Detected kernel version 4.18.0, which is below the recommended minimum of 5.5.0; this can cause the process to hang. It is recommended to upgrade the kernel to the minimum version or higher.
-[rank0]: Traceback (most recent call last):
-[rank0]:   File "/scratch/network/ec7379/NLPFinalProject/finetune.py", line 234, in <module>
-[rank0]:     trainer.train()
-[rank0]:   File "/home/ec7379/.conda/envs/adaptive-attack/lib/python3.10/site-packages/trl/trainer/sft_trainer.py", line 440, in train
-[rank0]:     output = super().train(*args, **kwargs)
-[rank0]:   File "/home/ec7379/.conda/envs/adaptive-attack/lib/python3.10/site-packages/transformers/trainer.py", line 1932, in train
-[rank0]:     return inner_training_loop(
-[rank0]:   File "/home/ec7379/.conda/envs/adaptive-attack/lib/python3.10/site-packages/transformers/trainer.py", line 2089, in _inner_training_loop
-[rank0]:     model, self.optimizer = self.accelerator.prepare(self.model, self.optimizer)
-[rank0]:   File "/home/ec7379/.conda/envs/adaptive-attack/lib/python3.10/site-packages/accelerate/accelerator.py", line 1296, in prepare
-[rank0]:     result = self._prepare_deepspeed(*args)
-[rank0]:   File "/home/ec7379/.conda/envs/adaptive-attack/lib/python3.10/site-packages/accelerate/accelerator.py", line 1771, in _prepare_deepspeed
-[rank0]:     engine, optimizer, _, lr_scheduler = deepspeed.initialize(**kwargs)
-[rank0]:   File "/home/ec7379/.conda/envs/adaptive-attack/lib/python3.10/site-packages/deepspeed/__init__.py", line 181, in initialize
-[rank0]:     engine = DeepSpeedEngine(args=args,
-[rank0]:   File "/home/ec7379/.conda/envs/adaptive-attack/lib/python3.10/site-packages/deepspeed/runtime/engine.py", line 306, in __init__
-[rank0]:     self._configure_optimizer(optimizer, model_parameters)
-[rank0]:   File "/home/ec7379/.conda/envs/adaptive-attack/lib/python3.10/site-packages/deepspeed/runtime/engine.py", line 1249, in _configure_optimizer
-[rank0]:     self.optimizer = self._configure_zero_optimizer(basic_optimizer)
-[rank0]:   File "/home/ec7379/.conda/envs/adaptive-attack/lib/python3.10/site-packages/deepspeed/runtime/engine.py", line 1573, in _configure_zero_optimizer
-[rank0]:     optimizer = DeepSpeedZeroOptimizer_Stage3(
-[rank0]:   File "/home/ec7379/.conda/envs/adaptive-attack/lib/python3.10/site-packages/deepspeed/runtime/zero/stage3.py", line 362, in __init__
-[rank0]:     self._setup_for_real_optimizer()
-[rank0]:   File "/home/ec7379/.conda/envs/adaptive-attack/lib/python3.10/site-packages/deepspeed/runtime/zero/stage3.py", line 472, in _setup_for_real_optimizer
-[rank0]:     self._create_fp32_partitions()
-[rank0]:   File "/home/ec7379/.conda/envs/adaptive-attack/lib/python3.10/site-packages/deepspeed/runtime/zero/stage3.py", line 864, in _create_fp32_partitions
-[rank0]:     self.device).clone().float().detach())
-[rank0]: torch.cuda.OutOfMemoryError: CUDA out of memory. Tried to allocate 3.77 GiB. GPU 
-E0405 20:31:38.938000 22390393574400 torch/distributed/elastic/multiprocessing/api.py:826] failed (exitcode: 1) local_rank: 0 (pid: 3424069) of binary: /home/ec7379/.conda/envs/adaptive-attack/bin/python
-Traceback (most recent call last):
-  File "/home/ec7379/.conda/envs/adaptive-attack/bin/accelerate", line 8, in <module>
-    sys.exit(main())
-  File "/home/ec7379/.conda/envs/adaptive-attack/lib/python3.10/site-packages/accelerate/commands/accelerate_cli.py", line 48, in main
-    args.func(args)
-  File "/home/ec7379/.conda/envs/adaptive-attack/lib/python3.10/site-packages/accelerate/commands/launch.py", line 1082, in launch_command
-    deepspeed_launcher(args)
-  File "/home/ec7379/.conda/envs/adaptive-attack/lib/python3.10/site-packages/accelerate/commands/launch.py", line 786, in deepspeed_launcher
-    distrib_run.run(args)
-  File "/home/ec7379/.conda/envs/adaptive-attack/lib/python3.10/site-packages/torch/distributed/run.py", line 870, in run
-    elastic_launch(
-  File "/home/ec7379/.conda/envs/adaptive-attack/lib/python3.10/site-packages/torch/distributed/launcher/api.py", line 132, in __call__
-    return launch_agent(self._config, self._entrypoint, list(args))
-  File "/home/ec7379/.conda/envs/adaptive-attack/lib/python3.10/site-packages/torch/distributed/launcher/api.py", line 263, in launch_agent
-    raise ChildFailedError(
-torch.distributed.elastic.multiprocessing.errors.ChildFailedError: 
-============================================================
-finetune.py FAILED
-------------------------------------------------------------
-Failures:
-  <NO_OTHER_FAILURES>
-------------------------------------------------------------
-Root Cause (first observed failure):
-[0]:
-  time      : 2025-04-05_20:31:38
-  host      : adroit-h11g2
-  rank      : 0 (local_rank: 0)
-  exitcode  : 1 (pid: 3424069)
-  error_file: <N/A>
-  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
-============================================================
-Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:  50%|█████     | 1/2 [00:04<00:04,  4.53s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:06<00:00,  3.07s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:06<00:00,  3.29s/it]
-Map:   0%|          | 0/100 [00:00<?, ? examples/s]Map: 100%|██████████| 100/100 [00:00<00:00, 6808.27 examples/s]
-Map:   0%|          | 0/100 [00:00<?, ? examples/s]Map: 100%|██████████| 100/100 [00:00<00:00, 2097.38 examples/s]
+Map:   0%|          | 0/100 [00:00<?, ? examples/s]Map: 100%|██████████| 100/100 [00:00<00:00, 3647.95 examples/s]
+/home/ec7379/.conda/envs/adaptive-attack/lib/python3.10/site-packages/huggingface_hub/utils/_deprecation.py:100: FutureWarning: Deprecated argument(s) used in '__init__': max_seq_length, dataset_text_field. Will not be supported from version '1.0.0'.
+
+Deprecated positional argument(s) used in SFTTrainer, please use the SFTConfig to set these arguments instead.
+  warnings.warn(message, FutureWarning)
+Map: 100%|██████████| 100/100 [00:00<00:00, 16693.75 examples/s]
+Map:   0%|          | 0/100 [00:00<?, ? examples/s]Map:   0%|          | 0/100 [00:00<?, ? examples/s]Map: 100%|██████████| 100/100 [00:00<00:00, 5161.52 examples/s]
+/home/ec7379/.conda/envs/adaptive-attack/lib/python3.10/site-packages/transformers/training_args.py:1961: FutureWarning: `--push_to_hub_token` is deprecated and will be removed in version 5 of 🤗 Transformers. Use `--hub_token` instead.
+  warnings.warn(
+/home/ec7379/.conda/envs/adaptive-attack/lib/python3.10/site-packages/trl/trainer/sft_trainer.py:269: UserWarning: You passed a `max_seq_length` argument to the SFTTrainer, the value you passed will override the one in the `SFTConfig`.
+  warnings.warn(
+/home/ec7379/.conda/envs/adaptive-attack/lib/python3.10/site-packages/trl/trainer/sft_trainer.py:307: UserWarning: You passed a `dataset_text_field` argument to the SFTTrainer, the value you passed will override the one in the `SFTConfig`.
+  warnings.warn(
+Map: 100%|██████████| 100/100 [00:00<00:00, 3649.09 examples/s]
 /home/ec7379/.conda/envs/adaptive-attack/lib/python3.10/site-packages/huggingface_hub/utils/_deprecation.py:100: FutureWarning: Deprecated argument(s) used in '__init__': max_seq_length, dataset_text_field. Will not be supported from version '1.0.0'.
 
 Deprecated positional argument(s) used in SFTTrainer, please use the SFTConfig to set these arguments instead.
@@ -237,71 +173,57 @@ Deprecated positional argument(s) used in SFTTrainer, please use the SFTConfig t
   warnings.warn(
 /home/ec7379/.conda/envs/adaptive-attack/lib/python3.10/site-packages/trl/trainer/sft_trainer.py:307: UserWarning: You passed a `dataset_text_field` argument to the SFTTrainer, the value you passed will override the one in the `SFTConfig`.
   warnings.warn(
-Map:   0%|          | 0/100 [00:00<?, ? examples/s]Map: 100%|██████████| 100/100 [00:00<00:00, 3427.33 examples/s]
+/home/ec7379/.conda/envs/adaptive-attack/lib/python3.10/site-packages/transformers/training_args.py:1961: FutureWarning: `--push_to_hub_token` is deprecated and will be removed in version 5 of 🤗 Transformers. Use `--hub_token` instead.
+  warnings.warn(
+/home/ec7379/.conda/envs/adaptive-attack/lib/python3.10/site-packages/trl/trainer/sft_trainer.py:269: UserWarning: You passed a `max_seq_length` argument to the SFTTrainer, the value you passed will override the one in the `SFTConfig`.
+  warnings.warn(
+/home/ec7379/.conda/envs/adaptive-attack/lib/python3.10/site-packages/trl/trainer/sft_trainer.py:307: UserWarning: You passed a `dataset_text_field` argument to the SFTTrainer, the value you passed will override the one in the `SFTConfig`.
+  warnings.warn(
 Detected kernel version 4.18.0, which is below the recommended minimum of 5.5.0; this can cause the process to hang. It is recommended to upgrade the kernel to the minimum version or higher.
-[rank0]: Traceback (most recent call last):
-[rank0]:   File "/scratch/network/ec7379/NLPFinalProject/finetune.py", line 234, in <module>
-[rank0]:     trainer.train()
-[rank0]:   File "/home/ec7379/.conda/envs/adaptive-attack/lib/python3.10/site-packages/trl/trainer/sft_trainer.py", line 440, in train
-[rank0]:     output = super().train(*args, **kwargs)
-[rank0]:   File "/home/ec7379/.conda/envs/adaptive-attack/lib/python3.10/site-packages/transformers/trainer.py", line 1932, in train
-[rank0]:     return inner_training_loop(
-[rank0]:   File "/home/ec7379/.conda/envs/adaptive-attack/lib/python3.10/site-packages/transformers/trainer.py", line 2089, in _inner_training_loop
-[rank0]:     model, self.optimizer = self.accelerator.prepare(self.model, self.optimizer)
-[rank0]:   File "/home/ec7379/.conda/envs/adaptive-attack/lib/python3.10/site-packages/accelerate/accelerator.py", line 1296, in prepare
-[rank0]:     result = self._prepare_deepspeed(*args)
-[rank0]:   File "/home/ec7379/.conda/envs/adaptive-attack/lib/python3.10/site-packages/accelerate/accelerator.py", line 1771, in _prepare_deepspeed
-[rank0]:     engine, optimizer, _, lr_scheduler = deepspeed.initialize(**kwargs)
-[rank0]:   File "/home/ec7379/.conda/envs/adaptive-attack/lib/python3.10/site-packages/deepspeed/__init__.py", line 181, in initialize
-[rank0]:     engine = DeepSpeedEngine(args=args,
-[rank0]:   File "/home/ec7379/.conda/envs/adaptive-attack/lib/python3.10/site-packages/deepspeed/runtime/engine.py", line 306, in __init__
-[rank0]:     self._configure_optimizer(optimizer, model_parameters)
-[rank0]:   File "/home/ec7379/.conda/envs/adaptive-attack/lib/python3.10/site-packages/deepspeed/runtime/engine.py", line 1249, in _configure_optimizer
-[rank0]:     self.optimizer = self._configure_zero_optimizer(basic_optimizer)
-[rank0]:   File "/home/ec7379/.conda/envs/adaptive-attack/lib/python3.10/site-packages/deepspeed/runtime/engine.py", line 1573, in _configure_zero_optimizer
-[rank0]:     optimizer = DeepSpeedZeroOptimizer_Stage3(
-[rank0]:   File "/home/ec7379/.conda/envs/adaptive-attack/lib/python3.10/site-packages/deepspeed/runtime/zero/stage3.py", line 362, in __init__
-[rank0]:     self._setup_for_real_optimizer()
-[rank0]:   File "/home/ec7379/.conda/envs/adaptive-attack/lib/python3.10/site-packages/deepspeed/runtime/zero/stage3.py", line 472, in _setup_for_real_optimizer
-[rank0]:     self._create_fp32_partitions()
-[rank0]:   File "/home/ec7379/.conda/envs/adaptive-attack/lib/python3.10/site-packages/deepspeed/runtime/zero/stage3.py", line 864, in _create_fp32_partitions
-[rank0]:     self.device).clone().float().detach())
-[rank0]: torch.cuda.OutOfMemoryError: CUDA out of memory. Tried to allocate 3.77 GiB. GPU 
-E0405 20:32:09.876000 23116276081664 torch/distributed/elastic/multiprocessing/api.py:826] failed (exitcode: 1) local_rank: 0 (pid: 3424358) of binary: /home/ec7379/.conda/envs/adaptive-attack/bin/python
-Traceback (most recent call last):
-  File "/home/ec7379/.conda/envs/adaptive-attack/bin/accelerate", line 8, in <module>
-    sys.exit(main())
-  File "/home/ec7379/.conda/envs/adaptive-attack/lib/python3.10/site-packages/accelerate/commands/accelerate_cli.py", line 48, in main
-    args.func(args)
-  File "/home/ec7379/.conda/envs/adaptive-attack/lib/python3.10/site-packages/accelerate/commands/launch.py", line 1082, in launch_command
-    deepspeed_launcher(args)
-  File "/home/ec7379/.conda/envs/adaptive-attack/lib/python3.10/site-packages/accelerate/commands/launch.py", line 786, in deepspeed_launcher
-    distrib_run.run(args)
-  File "/home/ec7379/.conda/envs/adaptive-attack/lib/python3.10/site-packages/torch/distributed/run.py", line 870, in run
-    elastic_launch(
-  File "/home/ec7379/.conda/envs/adaptive-attack/lib/python3.10/site-packages/torch/distributed/launcher/api.py", line 132, in __call__
-    return launch_agent(self._config, self._entrypoint, list(args))
-  File "/home/ec7379/.conda/envs/adaptive-attack/lib/python3.10/site-packages/torch/distributed/launcher/api.py", line 263, in launch_agent
-    raise ChildFailedError(
-torch.distributed.elastic.multiprocessing.errors.ChildFailedError: 
-============================================================
-finetune.py FAILED
-------------------------------------------------------------
-Failures:
-  <NO_OTHER_FAILURES>
-------------------------------------------------------------
-Root Cause (first observed failure):
-[0]:
-  time      : 2025-04-05_20:32:09
-  host      : adroit-h11g2
-  rank      : 0 (local_rank: 0)
-  exitcode  : 1 (pid: 3424358)
-  error_file: <N/A>
-  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
-============================================================
-Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:  50%|█████     | 1/2 [00:04<00:04,  4.46s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:06<00:00,  2.79s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:06<00:00,  3.04s/it]
-Map:   0%|          | 0/100 [00:00<?, ? examples/s]Map: 100%|██████████| 100/100 [00:00<00:00, 11825.93 examples/s]
-Map:   0%|          | 0/100 [00:00<?, ? examples/s]Map: 100%|██████████| 100/100 [00:00<00:00, 2314.24 examples/s]
+Map:   0%|          | 0/100 [00:00<?, ? examples/s]Map:   0%|          | 0/100 [00:00<?, ? examples/s]Map:   0%|          | 0/100 [00:00<?, ? examples/s]Map: 100%|██████████| 100/100 [00:00<00:00, 4972.80 examples/s]
+Map: 100%|██████████| 100/100 [00:00<00:00, 4790.15 examples/s]
+Map: 100%|██████████| 100/100 [00:00<00:00, 4867.31 examples/s]
+  0%|          | 0/50 [00:00<?, ?it/s]  2%|▏         | 1/50 [00:03<02:47,  3.42s/it]                                                2%|▏         | 1/50 [00:03<02:47,  3.42s/it]  4%|▍         | 2/50 [00:05<02:11,  2.74s/it]                                                4%|▍         | 2/50 [00:05<02:11,  2.74s/it]  6%|▌         | 3/50 [00:07<01:58,  2.53s/it]                                                6%|▌         | 3/50 [00:07<01:58,  2.53s/it]  8%|▊         | 4/50 [00:10<01:51,  2.42s/it]                                                8%|▊         | 4/50 [00:10<01:51,  2.42s/it] 10%|█         | 5/50 [00:12<01:45,  2.35s/it]                                               10%|█         | 5/50 [00:12<01:45,  2.35s/it] 12%|█▏        | 6/50 [00:14<01:42,  2.33s/it]                                               12%|█▏        | 6/50 [00:14<01:42,  2.33s/it] 14%|█▍        | 7/50 [00:17<01:39,  2.31s/it]                                               14%|█▍        | 7/50 [00:17<01:39,  2.31s/it] 16%|█▌        | 8/50 [00:19<01:35,  2.27s/it]                                               16%|█▌        | 8/50 [00:19<01:35,  2.27s/it] 18%|█▊        | 9/50 [00:21<01:33,  2.27s/it]                                               18%|█▊        | 9/50 [00:21<01:33,  2.27s/it] 20%|██        | 10/50 [00:23<01:30,  2.27s/it]                                                20%|██        | 10/50 [00:23<01:30,  2.27s/it] 22%|██▏       | 11/50 [00:26<01:28,  2.28s/it]                                                22%|██▏       | 11/50 [00:26<01:28,  2.28s/it] 24%|██▍       | 12/50 [00:28<01:26,  2.27s/it]                                                24%|██▍       | 12/50 [00:28<01:26,  2.27s/it] 26%|██▌       | 13/50 [00:30<01:24,  2.27s/it]                                                26%|██▌       | 13/50 [00:30<01:24,  2.27s/it] 28%|██▊       | 14/50 [00:32<01:21,  2.27s/it]                                                28%|██▊       | 14/50 [00:32<01:21,  2.27s/it] 30%|███       | 15/50 [00:35<01:19,  2.26s/it]                                                30%|███       | 15/50 [00:35<01:19,  2.26s/it] 32%|███▏      | 16/50 [00:37<01:18,  2.30s/it]                                                32%|███▏      | 16/50 [00:37<01:18,  2.30s/it] 34%|███▍      | 17/50 [00:39<01:15,  2.29s/it]                                                34%|███▍      | 17/50 [00:39<01:15,  2.29s/it] 36%|███▌      | 18/50 [00:41<01:12,  2.28s/it]                                                36%|███▌      | 18/50 [00:41<01:12,  2.28s/it] 38%|███▊      | 19/50 [00:44<01:11,  2.30s/it]                                                38%|███▊      | 19/50 [00:44<01:11,  2.30s/it] 40%|████      | 20/50 [00:46<01:08,  2.28s/it]                                                40%|████      | 20/50 [00:46<01:08,  2.28s/it] 42%|████▏     | 21/50 [00:48<01:06,  2.29s/it]                                                42%|████▏     | 21/50 [00:48<01:06,  2.29s/it] 44%|████▍     | 22/50 [00:51<01:03,  2.28s/it]                                                44%|████▍     | 22/50 [00:51<01:03,  2.28s/it] 46%|████▌     | 23/50 [00:53<01:01,  2.28s/it]                                                46%|████▌     | 23/50 [00:53<01:01,  2.28s/it] 48%|████▊     | 24/50 [00:55<00:59,  2.29s/it]                                                48%|████▊     | 24/50 [00:55<00:59,  2.29s/it] 50%|█████     | 25/50 [00:58<00:57,  2.29s/it]                                                50%|█████     | 25/50 [00:58<00:57,  2.29s/it] 52%|█████▏    | 26/50 [01:00<00:54,  2.29s/it]                                                52%|█████▏    | 26/50 [01:00<00:54,  2.29s/it] 54%|█████▍    | 27/50 [01:02<00:52,  2.29s/it]                                                54%|█████▍    | 27/50 [01:02<00:52,  2.29s/it] 56%|█████▌    | 28/50 [01:04<00:50,  2.28s/it]                                                56%|█████▌    | 28/50 [01:04<00:50,  2.28s/it] 58%|█████▊    | 29/50 [01:07<00:48,  2.29s/it]                                                58%|█████▊    | 29/50 [01:07<00:48,  2.29s/it] 60%|██████    | 30/50 [01:09<00:45,  2.28s/it]                                                60%|██████    | 30/50 [01:09<00:45,  2.28s/it] 62%|██████▏   | 31/50 [01:11<00:43,  2.27s/it]                                                62%|██████▏   | 31/50 [01:11<00:43,  2.27s/it] 64%|██████▍   | 32/50 [01:13<00:41,  2.28s/it]                                                64%|██████▍   | 32/50 [01:13<00:41,  2.28s/it] 66%|██████▌   | 33/50 [01:16<00:38,  2.28s/it]                                                66%|██████▌   | 33/50 [01:16<00:38,  2.28s/it] 68%|██████▊   | 34/50 [01:18<00:36,  2.27s/it]                                                68%|██████▊   | 34/50 [01:18<00:36,  2.27s/it] 70%|███████   | 35/50 [01:20<00:34,  2.27s/it]                                                70%|███████   | 35/50 [01:20<00:34,  2.27s/it] 72%|███████▏  | 36/50 [01:23<00:31,  2.26s/it]                                                72%|███████▏  | 36/50 [01:23<00:31,  2.26s/it] 74%|███████▍  | 37/50 [01:25<00:29,  2.27s/it]                                                74%|███████▍  | 37/50 [01:25<00:29,  2.27s/it] 76%|███████▌  | 38/50 [01:27<00:27,  2.30s/it]                                                76%|███████▌  | 38/50 [01:27<00:27,  2.30s/it] 78%|███████▊  | 39/50 [01:29<00:25,  2.29s/it]                                                78%|███████▊  | 39/50 [01:29<00:25,  2.29s/it] 80%|████████  | 40/50 [01:32<00:22,  2.29s/it]                                                80%|████████  | 40/50 [01:32<00:22,  2.29s/it] 82%|████████▏ | 41/50 [01:34<00:20,  2.28s/it]                                                82%|████████▏ | 41/50 [01:34<00:20,  2.28s/it] 84%|████████▍ | 42/50 [01:36<00:18,  2.28s/it]                                                84%|████████▍ | 42/50 [01:36<00:18,  2.28s/it] 86%|████████▌ | 43/50 [01:38<00:15,  2.27s/it]                                                86%|████████▌ | 43/50 [01:38<00:15,  2.27s/it] 88%|████████▊ | 44/50 [01:41<00:13,  2.29s/it]                                                88%|████████▊ | 44/50 [01:41<00:13,  2.29s/it] 90%|█████████ | 45/50 [01:43<00:11,  2.30s/it]                                                90%|█████████ | 45/50 [01:43<00:11,  2.30s/it] 92%|█████████▏| 46/50 [01:45<00:09,  2.30s/it]                                                92%|█████████▏| 46/50 [01:45<00:09,  2.30s/it] 94%|█████████▍| 47/50 [01:48<00:06,  2.29s/it]                                                94%|█████████▍| 47/50 [01:48<00:06,  2.29s/it] 96%|█████████▌| 48/50 [01:50<00:04,  2.29s/it]                                                96%|█████████▌| 48/50 [01:50<00:04,  2.29s/it] 98%|█████████▊| 49/50 [01:52<00:02,  2.29s/it]                                                98%|█████████▊| 49/50 [01:52<00:02,  2.29s/it]100%|██████████| 50/50 [01:55<00:00,  2.28s/it]                                               100%|██████████| 50/50 [01:55<00:00,  2.28s/it]                                               100%|██████████| 50/50 [01:55<00:00,  2.28s/it]100%|██████████| 50/50 [01:55<00:00,  2.30s/it]
+W0409 20:29:17.662000 22601836643328 torch/distributed/run.py:757] 
+W0409 20:29:17.662000 22601836643328 torch/distributed/run.py:757] *****************************************
+W0409 20:29:17.662000 22601836643328 torch/distributed/run.py:757] Setting OMP_NUM_THREADS environment variable for each process to be 1 in default, to avoid your system being overloaded, please further tune the variable for optimal performance in your application as needed. 
+W0409 20:29:17.662000 22601836643328 torch/distributed/run.py:757] *****************************************
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:  50%|█████     | 1/2 [00:01<00:01,  1.96s/it]Loading checkpoint shards:  50%|█████     | 1/2 [00:01<00:01,  1.97s/it]Loading checkpoint shards:  50%|█████     | 1/2 [00:01<00:01,  1.97s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:04<00:00,  2.08s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:04<00:00,  2.06s/it]
+Loading checkpoint shards: 100%|██████████| 2/2 [00:04<00:00,  2.08s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:04<00:00,  2.06s/it]
+Loading checkpoint shards: 100%|██████████| 2/2 [00:04<00:00,  2.08s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:04<00:00,  2.07s/it]
+Loading checkpoint shards:  50%|█████     | 1/2 [00:07<00:07,  7.15s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:09<00:00,  4.40s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:09<00:00,  4.81s/it]
+Map:   0%|          | 0/100 [00:00<?, ? examples/s]Map:   0%|          | 0/100 [00:00<?, ? examples/s]Map:   0%|          | 0/100 [00:00<?, ? examples/s]Map: 100%|██████████| 100/100 [00:00<00:00, 18192.60 examples/s]
+Map: 100%|██████████| 100/100 [00:00<00:00, 16853.39 examples/s]
+Map: 100%|██████████| 100/100 [00:00<00:00, 15404.38 examples/s]
+Map:   0%|          | 0/100 [00:00<?, ? examples/s]Map:   0%|          | 0/100 [00:00<?, ? examples/s]Map:   0%|          | 0/100 [00:00<?, ? examples/s]Map: 100%|██████████| 100/100 [00:00<00:00, 3679.86 examples/s]
+/home/ec7379/.conda/envs/adaptive-attack/lib/python3.10/site-packages/huggingface_hub/utils/_deprecation.py:100: FutureWarning: Deprecated argument(s) used in '__init__': max_seq_length, dataset_text_field. Will not be supported from version '1.0.0'.
+
+Deprecated positional argument(s) used in SFTTrainer, please use the SFTConfig to set these arguments instead.
+  warnings.warn(message, FutureWarning)
+Map:   0%|          | 0/100 [00:00<?, ? examples/s]Map: 100%|██████████| 100/100 [00:00<00:00, 3525.13 examples/s]
+/home/ec7379/.conda/envs/adaptive-attack/lib/python3.10/site-packages/huggingface_hub/utils/_deprecation.py:100: FutureWarning: Deprecated argument(s) used in '__init__': max_seq_length, dataset_text_field. Will not be supported from version '1.0.0'.
+
+Deprecated positional argument(s) used in SFTTrainer, please use the SFTConfig to set these arguments instead.
+  warnings.warn(message, FutureWarning)
+Map: 100%|██████████| 100/100 [00:00<00:00, 3484.77 examples/s]
+/home/ec7379/.conda/envs/adaptive-attack/lib/python3.10/site-packages/huggingface_hub/utils/_deprecation.py:100: FutureWarning: Deprecated argument(s) used in '__init__': max_seq_length, dataset_text_field. Will not be supported from version '1.0.0'.
+
+Deprecated positional argument(s) used in SFTTrainer, please use the SFTConfig to set these arguments instead.
+  warnings.warn(message, FutureWarning)
+Map: 100%|██████████| 100/100 [00:00<00:00, 15213.29 examples/s]
+Map:   0%|          | 0/100 [00:00<?, ? examples/s]/home/ec7379/.conda/envs/adaptive-attack/lib/python3.10/site-packages/transformers/training_args.py:1961: FutureWarning: `--push_to_hub_token` is deprecated and will be removed in version 5 of 🤗 Transformers. Use `--hub_token` instead.
+  warnings.warn(
+/home/ec7379/.conda/envs/adaptive-attack/lib/python3.10/site-packages/trl/trainer/sft_trainer.py:269: UserWarning: You passed a `max_seq_length` argument to the SFTTrainer, the value you passed will override the one in the `SFTConfig`.
+  warnings.warn(
+/home/ec7379/.conda/envs/adaptive-attack/lib/python3.10/site-packages/trl/trainer/sft_trainer.py:307: UserWarning: You passed a `dataset_text_field` argument to the SFTTrainer, the value you passed will override the one in the `SFTConfig`.
+  warnings.warn(
+/home/ec7379/.conda/envs/adaptive-attack/lib/python3.10/site-packages/transformers/training_args.py:1961: FutureWarning: `--push_to_hub_token` is deprecated and will be removed in version 5 of 🤗 Transformers. Use `--hub_token` instead.
+  warnings.warn(
+/home/ec7379/.conda/envs/adaptive-attack/lib/python3.10/site-packages/trl/trainer/sft_trainer.py:269: UserWarning: You passed a `max_seq_length` argument to the SFTTrainer, the value you passed will override the one in the `SFTConfig`.
+  warnings.warn(
+/home/ec7379/.conda/envs/adaptive-attack/lib/python3.10/site-packages/trl/trainer/sft_trainer.py:307: UserWarning: You passed a `dataset_text_field` argument to the SFTTrainer, the value you passed will override the one in the `SFTConfig`.
+  warnings.warn(
+Map:   0%|          | 0/100 [00:00<?, ? examples/s]Map: 100%|██████████| 100/100 [00:00<00:00, 3539.68 examples/s]
 /home/ec7379/.conda/envs/adaptive-attack/lib/python3.10/site-packages/huggingface_hub/utils/_deprecation.py:100: FutureWarning: Deprecated argument(s) used in '__init__': max_seq_length, dataset_text_field. Will not be supported from version '1.0.0'.
 
 Deprecated positional argument(s) used in SFTTrainer, please use the SFTConfig to set these arguments instead.
@@ -312,65 +234,77 @@ Deprecated positional argument(s) used in SFTTrainer, please use the SFTConfig t
   warnings.warn(
 /home/ec7379/.conda/envs/adaptive-attack/lib/python3.10/site-packages/trl/trainer/sft_trainer.py:307: UserWarning: You passed a `dataset_text_field` argument to the SFTTrainer, the value you passed will override the one in the `SFTConfig`.
   warnings.warn(
-Map:   0%|          | 0/100 [00:00<?, ? examples/s]Map: 100%|██████████| 100/100 [00:00<00:00, 3671.81 examples/s]
+Map: 100%|██████████| 100/100 [00:00<00:00, 3973.46 examples/s]
+/home/ec7379/.conda/envs/adaptive-attack/lib/python3.10/site-packages/transformers/training_args.py:1961: FutureWarning: `--push_to_hub_token` is deprecated and will be removed in version 5 of 🤗 Transformers. Use `--hub_token` instead.
+  warnings.warn(
+/home/ec7379/.conda/envs/adaptive-attack/lib/python3.10/site-packages/trl/trainer/sft_trainer.py:269: UserWarning: You passed a `max_seq_length` argument to the SFTTrainer, the value you passed will override the one in the `SFTConfig`.
+  warnings.warn(
+/home/ec7379/.conda/envs/adaptive-attack/lib/python3.10/site-packages/trl/trainer/sft_trainer.py:307: UserWarning: You passed a `dataset_text_field` argument to the SFTTrainer, the value you passed will override the one in the `SFTConfig`.
+  warnings.warn(
 Detected kernel version 4.18.0, which is below the recommended minimum of 5.5.0; this can cause the process to hang. It is recommended to upgrade the kernel to the minimum version or higher.
-[rank0]: Traceback (most recent call last):
-[rank0]:   File "/scratch/network/ec7379/NLPFinalProject/finetune.py", line 234, in <module>
-[rank0]:     trainer.train()
-[rank0]:   File "/home/ec7379/.conda/envs/adaptive-attack/lib/python3.10/site-packages/trl/trainer/sft_trainer.py", line 440, in train
-[rank0]:     output = super().train(*args, **kwargs)
-[rank0]:   File "/home/ec7379/.conda/envs/adaptive-attack/lib/python3.10/site-packages/transformers/trainer.py", line 1932, in train
-[rank0]:     return inner_training_loop(
-[rank0]:   File "/home/ec7379/.conda/envs/adaptive-attack/lib/python3.10/site-packages/transformers/trainer.py", line 2089, in _inner_training_loop
-[rank0]:     model, self.optimizer = self.accelerator.prepare(self.model, self.optimizer)
-[rank0]:   File "/home/ec7379/.conda/envs/adaptive-attack/lib/python3.10/site-packages/accelerate/accelerator.py", line 1296, in prepare
-[rank0]:     result = self._prepare_deepspeed(*args)
-[rank0]:   File "/home/ec7379/.conda/envs/adaptive-attack/lib/python3.10/site-packages/accelerate/accelerator.py", line 1771, in _prepare_deepspeed
-[rank0]:     engine, optimizer, _, lr_scheduler = deepspeed.initialize(**kwargs)
-[rank0]:   File "/home/ec7379/.conda/envs/adaptive-attack/lib/python3.10/site-packages/deepspeed/__init__.py", line 181, in initialize
-[rank0]:     engine = DeepSpeedEngine(args=args,
-[rank0]:   File "/home/ec7379/.conda/envs/adaptive-attack/lib/python3.10/site-packages/deepspeed/runtime/engine.py", line 306, in __init__
-[rank0]:     self._configure_optimizer(optimizer, model_parameters)
-[rank0]:   File "/home/ec7379/.conda/envs/adaptive-attack/lib/python3.10/site-packages/deepspeed/runtime/engine.py", line 1249, in _configure_optimizer
-[rank0]:     self.optimizer = self._configure_zero_optimizer(basic_optimizer)
-[rank0]:   File "/home/ec7379/.conda/envs/adaptive-attack/lib/python3.10/site-packages/deepspeed/runtime/engine.py", line 1573, in _configure_zero_optimizer
-[rank0]:     optimizer = DeepSpeedZeroOptimizer_Stage3(
-[rank0]:   File "/home/ec7379/.conda/envs/adaptive-attack/lib/python3.10/site-packages/deepspeed/runtime/zero/stage3.py", line 362, in __init__
-[rank0]:     self._setup_for_real_optimizer()
-[rank0]:   File "/home/ec7379/.conda/envs/adaptive-attack/lib/python3.10/site-packages/deepspeed/runtime/zero/stage3.py", line 472, in _setup_for_real_optimizer
-[rank0]:     self._create_fp32_partitions()
-[rank0]:   File "/home/ec7379/.conda/envs/adaptive-attack/lib/python3.10/site-packages/deepspeed/runtime/zero/stage3.py", line 864, in _create_fp32_partitions
-[rank0]:     self.device).clone().float().detach())
-[rank0]: torch.cuda.OutOfMemoryError: CUDA out of memory. Tried to allocate 3.77 GiB. GPU 
-E0405 20:32:35.417000 22869999924224 torch/distributed/elastic/multiprocessing/api.py:826] failed (exitcode: 1) local_rank: 0 (pid: 3424757) of binary: /home/ec7379/.conda/envs/adaptive-attack/bin/python
-Traceback (most recent call last):
-  File "/home/ec7379/.conda/envs/adaptive-attack/bin/accelerate", line 8, in <module>
-    sys.exit(main())
-  File "/home/ec7379/.conda/envs/adaptive-attack/lib/python3.10/site-packages/accelerate/commands/accelerate_cli.py", line 48, in main
-    args.func(args)
-  File "/home/ec7379/.conda/envs/adaptive-attack/lib/python3.10/site-packages/accelerate/commands/launch.py", line 1082, in launch_command
-    deepspeed_launcher(args)
-  File "/home/ec7379/.conda/envs/adaptive-attack/lib/python3.10/site-packages/accelerate/commands/launch.py", line 786, in deepspeed_launcher
-    distrib_run.run(args)
-  File "/home/ec7379/.conda/envs/adaptive-attack/lib/python3.10/site-packages/torch/distributed/run.py", line 870, in run
-    elastic_launch(
-  File "/home/ec7379/.conda/envs/adaptive-attack/lib/python3.10/site-packages/torch/distributed/launcher/api.py", line 132, in __call__
-    return launch_agent(self._config, self._entrypoint, list(args))
-  File "/home/ec7379/.conda/envs/adaptive-attack/lib/python3.10/site-packages/torch/distributed/launcher/api.py", line 263, in launch_agent
-    raise ChildFailedError(
-torch.distributed.elastic.multiprocessing.errors.ChildFailedError: 
-============================================================
-finetune.py FAILED
-------------------------------------------------------------
-Failures:
-  <NO_OTHER_FAILURES>
-------------------------------------------------------------
-Root Cause (first observed failure):
-[0]:
-  time      : 2025-04-05_20:32:35
-  host      : adroit-h11g2
-  rank      : 0 (local_rank: 0)
-  exitcode  : 1 (pid: 3424757)
-  error_file: <N/A>
-  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
-============================================================
+Map:   0%|          | 0/100 [00:00<?, ? examples/s]Map:   0%|          | 0/100 [00:00<?, ? examples/s]Map:   0%|          | 0/100 [00:00<?, ? examples/s]Map: 100%|██████████| 100/100 [00:00<00:00, 4911.25 examples/s]
+Map: 100%|██████████| 100/100 [00:00<00:00, 4752.11 examples/s]
+Map: 100%|██████████| 100/100 [00:00<00:00, 3867.07 examples/s]
+  0%|          | 0/50 [00:00<?, ?it/s]  2%|▏         | 1/50 [00:03<02:48,  3.45s/it]                                                2%|▏         | 1/50 [00:03<02:48,  3.45s/it]  4%|▍         | 2/50 [00:05<02:12,  2.75s/it]                                                4%|▍         | 2/50 [00:05<02:12,  2.75s/it]  6%|▌         | 3/50 [00:07<01:59,  2.54s/it]                                                6%|▌         | 3/50 [00:07<01:59,  2.54s/it]  8%|▊         | 4/50 [00:10<01:51,  2.42s/it]                                                8%|▊         | 4/50 [00:10<01:51,  2.42s/it] 10%|█         | 5/50 [00:12<01:45,  2.35s/it]                                               10%|█         | 5/50 [00:12<01:45,  2.35s/it] 12%|█▏        | 6/50 [00:14<01:42,  2.33s/it]                                               12%|█▏        | 6/50 [00:14<01:42,  2.33s/it] 14%|█▍        | 7/50 [00:17<01:39,  2.31s/it]                                               14%|█▍        | 7/50 [00:17<01:39,  2.31s/it] 16%|█▌        | 8/50 [00:19<01:35,  2.27s/it]                                               16%|█▌        | 8/50 [00:19<01:35,  2.27s/it] 18%|█▊        | 9/50 [00:21<01:33,  2.27s/it]                                               18%|█▊        | 9/50 [00:21<01:33,  2.27s/it] 20%|██        | 10/50 [00:23<01:30,  2.27s/it]                                                20%|██        | 10/50 [00:23<01:30,  2.27s/it] 22%|██▏       | 11/50 [00:26<01:28,  2.28s/it]                                                22%|██▏       | 11/50 [00:26<01:28,  2.28s/it] 24%|██▍       | 12/50 [00:28<01:26,  2.27s/it]                                                24%|██▍       | 12/50 [00:28<01:26,  2.27s/it] 26%|██▌       | 13/50 [00:30<01:24,  2.27s/it]                                                26%|██▌       | 13/50 [00:30<01:24,  2.27s/it] 28%|██▊       | 14/50 [00:32<01:21,  2.26s/it]                                                28%|██▊       | 14/50 [00:32<01:21,  2.26s/it] 30%|███       | 15/50 [00:35<01:19,  2.26s/it]                                                30%|███       | 15/50 [00:35<01:19,  2.26s/it] 32%|███▏      | 16/50 [00:37<01:18,  2.30s/it]                                                32%|███▏      | 16/50 [00:37<01:18,  2.30s/it] 34%|███▍      | 17/50 [00:39<01:15,  2.29s/it]                                                34%|███▍      | 17/50 [00:39<01:15,  2.29s/it] 36%|███▌      | 18/50 [00:41<01:12,  2.28s/it]                                                36%|███▌      | 18/50 [00:41<01:12,  2.28s/it] 38%|███▊      | 19/50 [00:44<01:11,  2.30s/it]                                                38%|███▊      | 19/50 [00:44<01:11,  2.30s/it] 40%|████      | 20/50 [00:46<01:08,  2.28s/it]                                                40%|████      | 20/50 [00:46<01:08,  2.28s/it] 42%|████▏     | 21/50 [00:48<01:06,  2.28s/it]                                                42%|████▏     | 21/50 [00:48<01:06,  2.28s/it] 44%|████▍     | 22/50 [00:51<01:03,  2.28s/it]                                                44%|████▍     | 22/50 [00:51<01:03,  2.28s/it] 46%|████▌     | 23/50 [00:53<01:01,  2.28s/it]                                                46%|████▌     | 23/50 [00:53<01:01,  2.28s/it] 48%|████▊     | 24/50 [00:55<00:59,  2.28s/it]                                                48%|████▊     | 24/50 [00:55<00:59,  2.28s/it] 50%|█████     | 25/50 [00:57<00:57,  2.29s/it]                                                50%|█████     | 25/50 [00:58<00:57,  2.29s/it] 52%|█████▏    | 26/50 [01:00<00:54,  2.29s/it]                                                52%|█████▏    | 26/50 [01:00<00:54,  2.29s/it] 54%|█████▍    | 27/50 [01:02<00:52,  2.29s/it]                                                54%|█████▍    | 27/50 [01:02<00:52,  2.29s/it] 56%|█████▌    | 28/50 [01:04<00:50,  2.28s/it]                                                56%|█████▌    | 28/50 [01:04<00:50,  2.28s/it] 58%|█████▊    | 29/50 [01:07<00:47,  2.28s/it]                                                58%|█████▊    | 29/50 [01:07<00:47,  2.28s/it] 60%|██████    | 30/50 [01:09<00:45,  2.27s/it]                                                60%|██████    | 30/50 [01:09<00:45,  2.27s/it] 62%|██████▏   | 31/50 [01:11<00:43,  2.27s/it]                                                62%|██████▏   | 31/50 [01:11<00:43,  2.27s/it] 64%|██████▍   | 32/50 [01:13<00:40,  2.28s/it]                                                64%|██████▍   | 32/50 [01:13<00:40,  2.28s/it] 66%|██████▌   | 33/50 [01:16<00:38,  2.28s/it]                                                66%|██████▌   | 33/50 [01:16<00:38,  2.28s/it] 68%|██████▊   | 34/50 [01:18<00:36,  2.27s/it]                                                68%|██████▊   | 34/50 [01:18<00:36,  2.27s/it] 70%|███████   | 35/50 [01:20<00:34,  2.27s/it]                                                70%|███████   | 35/50 [01:20<00:34,  2.27s/it] 72%|███████▏  | 36/50 [01:22<00:31,  2.26s/it]                                                72%|███████▏  | 36/50 [01:22<00:31,  2.26s/it] 74%|███████▍  | 37/50 [01:25<00:29,  2.27s/it]                                                74%|███████▍  | 37/50 [01:25<00:29,  2.27s/it] 76%|███████▌  | 38/50 [01:27<00:27,  2.29s/it]                                                76%|███████▌  | 38/50 [01:27<00:27,  2.29s/it] 78%|███████▊  | 39/50 [01:29<00:25,  2.29s/it]                                                78%|███████▊  | 39/50 [01:29<00:25,  2.29s/it] 80%|████████  | 40/50 [01:32<00:22,  2.29s/it]                                                80%|████████  | 40/50 [01:32<00:22,  2.29s/it] 82%|████████▏ | 41/50 [01:34<00:20,  2.28s/it]                                                82%|████████▏ | 41/50 [01:34<00:20,  2.28s/it] 84%|████████▍ | 42/50 [01:36<00:18,  2.27s/it]                                                84%|████████▍ | 42/50 [01:36<00:18,  2.27s/it] 86%|████████▌ | 43/50 [01:38<00:15,  2.26s/it]                                                86%|████████▌ | 43/50 [01:38<00:15,  2.26s/it] 88%|████████▊ | 44/50 [01:41<00:13,  2.27s/it]                                                88%|████████▊ | 44/50 [01:41<00:13,  2.27s/it] 90%|█████████ | 45/50 [01:43<00:11,  2.29s/it]                                                90%|█████████ | 45/50 [01:43<00:11,  2.29s/it] 92%|█████████▏| 46/50 [01:45<00:09,  2.29s/it]                                                92%|█████████▏| 46/50 [01:45<00:09,  2.29s/it] 94%|█████████▍| 47/50 [01:48<00:06,  2.29s/it]                                                94%|█████████▍| 47/50 [01:48<00:06,  2.29s/it] 96%|█████████▌| 48/50 [01:50<00:04,  2.29s/it]                                                96%|█████████▌| 48/50 [01:50<00:04,  2.29s/it] 98%|█████████▊| 49/50 [01:52<00:02,  2.28s/it]                                                98%|█████████▊| 49/50 [01:52<00:02,  2.28s/it]100%|██████████| 50/50 [01:54<00:00,  2.28s/it]                                               100%|██████████| 50/50 [01:54<00:00,  2.28s/it]                                               100%|██████████| 50/50 [01:54<00:00,  2.28s/it]100%|██████████| 50/50 [01:54<00:00,  2.30s/it]
+W0409 20:31:45.369000 23367559959552 torch/distributed/run.py:757] 
+W0409 20:31:45.369000 23367559959552 torch/distributed/run.py:757] *****************************************
+W0409 20:31:45.369000 23367559959552 torch/distributed/run.py:757] Setting OMP_NUM_THREADS environment variable for each process to be 1 in default, to avoid your system being overloaded, please further tune the variable for optimal performance in your application as needed. 
+W0409 20:31:45.369000 23367559959552 torch/distributed/run.py:757] *****************************************
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:  50%|█████     | 1/2 [00:01<00:01,  1.97s/it]Loading checkpoint shards:  50%|█████     | 1/2 [00:01<00:01,  1.99s/it]Loading checkpoint shards:  50%|█████     | 1/2 [00:02<00:02,  2.01s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:04<00:00,  2.06s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:04<00:00,  2.05s/it]
+Loading checkpoint shards: 100%|██████████| 2/2 [00:04<00:00,  2.08s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:04<00:00,  2.06s/it]
+Loading checkpoint shards: 100%|██████████| 2/2 [00:04<00:00,  2.07s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:04<00:00,  2.06s/it]
+Loading checkpoint shards:  50%|█████     | 1/2 [00:07<00:07,  7.19s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:09<00:00,  4.41s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:09<00:00,  4.83s/it]
+Map:   0%|          | 0/100 [00:00<?, ? examples/s]Map:   0%|          | 0/100 [00:00<?, ? examples/s]Map:   0%|          | 0/100 [00:00<?, ? examples/s]Map: 100%|██████████| 100/100 [00:00<00:00, 16491.58 examples/s]
+Map: 100%|██████████| 100/100 [00:00<00:00, 16577.62 examples/s]
+Map: 100%|██████████| 100/100 [00:00<00:00, 15940.04 examples/s]
+Map:   0%|          | 0/100 [00:00<?, ? examples/s]Map:   0%|          | 0/100 [00:00<?, ? examples/s]Map:   0%|          | 0/100 [00:00<?, ? examples/s]Map: 100%|██████████| 100/100 [00:00<00:00, 3629.77 examples/s]
+/home/ec7379/.conda/envs/adaptive-attack/lib/python3.10/site-packages/huggingface_hub/utils/_deprecation.py:100: FutureWarning: Deprecated argument(s) used in '__init__': max_seq_length, dataset_text_field. Will not be supported from version '1.0.0'.
+
+Deprecated positional argument(s) used in SFTTrainer, please use the SFTConfig to set these arguments instead.
+  warnings.warn(message, FutureWarning)
+Map: 100%|██████████| 100/100 [00:00<00:00, 3616.47 examples/s]
+/home/ec7379/.conda/envs/adaptive-attack/lib/python3.10/site-packages/huggingface_hub/utils/_deprecation.py:100: FutureWarning: Deprecated argument(s) used in '__init__': max_seq_length, dataset_text_field. Will not be supported from version '1.0.0'.
+
+Deprecated positional argument(s) used in SFTTrainer, please use the SFTConfig to set these arguments instead.
+  warnings.warn(message, FutureWarning)
+Map: 100%|██████████| 100/100 [00:00<00:00, 3525.75 examples/s]
+/home/ec7379/.conda/envs/adaptive-attack/lib/python3.10/site-packages/huggingface_hub/utils/_deprecation.py:100: FutureWarning: Deprecated argument(s) used in '__init__': max_seq_length, dataset_text_field. Will not be supported from version '1.0.0'.
+
+Deprecated positional argument(s) used in SFTTrainer, please use the SFTConfig to set these arguments instead.
+  warnings.warn(message, FutureWarning)
+Map:   0%|          | 0/100 [00:00<?, ? examples/s]Map: 100%|██████████| 100/100 [00:00<00:00, 15772.80 examples/s]
+Map:   0%|          | 0/100 [00:00<?, ? examples/s]/home/ec7379/.conda/envs/adaptive-attack/lib/python3.10/site-packages/transformers/training_args.py:1961: FutureWarning: `--push_to_hub_token` is deprecated and will be removed in version 5 of 🤗 Transformers. Use `--hub_token` instead.
+  warnings.warn(
+/home/ec7379/.conda/envs/adaptive-attack/lib/python3.10/site-packages/transformers/training_args.py:1961: FutureWarning: `--push_to_hub_token` is deprecated and will be removed in version 5 of 🤗 Transformers. Use `--hub_token` instead.
+  warnings.warn(
+/home/ec7379/.conda/envs/adaptive-attack/lib/python3.10/site-packages/trl/trainer/sft_trainer.py:269: UserWarning: You passed a `max_seq_length` argument to the SFTTrainer, the value you passed will override the one in the `SFTConfig`.
+  warnings.warn(
+/home/ec7379/.conda/envs/adaptive-attack/lib/python3.10/site-packages/trl/trainer/sft_trainer.py:307: UserWarning: You passed a `dataset_text_field` argument to the SFTTrainer, the value you passed will override the one in the `SFTConfig`.
+  warnings.warn(
+/home/ec7379/.conda/envs/adaptive-attack/lib/python3.10/site-packages/trl/trainer/sft_trainer.py:269: UserWarning: You passed a `max_seq_length` argument to the SFTTrainer, the value you passed will override the one in the `SFTConfig`.
+  warnings.warn(
+/home/ec7379/.conda/envs/adaptive-attack/lib/python3.10/site-packages/trl/trainer/sft_trainer.py:307: UserWarning: You passed a `dataset_text_field` argument to the SFTTrainer, the value you passed will override the one in the `SFTConfig`.
+  warnings.warn(
+/home/ec7379/.conda/envs/adaptive-attack/lib/python3.10/site-packages/transformers/training_args.py:1961: FutureWarning: `--push_to_hub_token` is deprecated and will be removed in version 5 of 🤗 Transformers. Use `--hub_token` instead.
+  warnings.warn(
+/home/ec7379/.conda/envs/adaptive-attack/lib/python3.10/site-packages/trl/trainer/sft_trainer.py:269: UserWarning: You passed a `max_seq_length` argument to the SFTTrainer, the value you passed will override the one in the `SFTConfig`.
+  warnings.warn(
+/home/ec7379/.conda/envs/adaptive-attack/lib/python3.10/site-packages/trl/trainer/sft_trainer.py:307: UserWarning: You passed a `dataset_text_field` argument to the SFTTrainer, the value you passed will override the one in the `SFTConfig`.
+  warnings.warn(
+Map: 100%|██████████| 100/100 [00:00<00:00, 3534.58 examples/s]
+/home/ec7379/.conda/envs/adaptive-attack/lib/python3.10/site-packages/huggingface_hub/utils/_deprecation.py:100: FutureWarning: Deprecated argument(s) used in '__init__': max_seq_length, dataset_text_field. Will not be supported from version '1.0.0'.
+
+Deprecated positional argument(s) used in SFTTrainer, please use the SFTConfig to set these arguments instead.
+  warnings.warn(message, FutureWarning)
+Map:   0%|          | 0/100 [00:00<?, ? examples/s]Map: 100%|██████████| 100/100 [00:00<00:00, 7589.30 examples/s]
+/home/ec7379/.conda/envs/adaptive-attack/lib/python3.10/site-packages/transformers/training_args.py:1961: FutureWarning: `--push_to_hub_token` is deprecated and will be removed in version 5 of 🤗 Transformers. Use `--hub_token` instead.
+  warnings.warn(
+/home/ec7379/.conda/envs/adaptive-attack/lib/python3.10/site-packages/trl/trainer/sft_trainer.py:269: UserWarning: You passed a `max_seq_length` argument to the SFTTrainer, the value you passed will override the one in the `SFTConfig`.
+  warnings.warn(
+/home/ec7379/.conda/envs/adaptive-attack/lib/python3.10/site-packages/trl/trainer/sft_trainer.py:307: UserWarning: You passed a `dataset_text_field` argument to the SFTTrainer, the value you passed will override the one in the `SFTConfig`.
+  warnings.warn(
+Detected kernel version 4.18.0, which is below the recommended minimum of 5.5.0; this can cause the process to hang. It is recommended to upgrade the kernel to the minimum version or higher.
+Map:   0%|          | 0/100 [00:00<?, ? examples/s]Map:   0%|          | 0/100 [00:00<?, ? examples/s]Map:   0%|          | 0/100 [00:00<?, ? examples/s]Map: 100%|██████████| 100/100 [00:00<00:00, 7485.82 examples/s]
+Map: 100%|██████████| 100/100 [00:00<00:00, 4964.03 examples/s]
+Map: 100%|██████████| 100/100 [00:00<00:00, 3464.99 examples/s]
+  0%|          | 0/50 [00:00<?, ?it/s]  2%|▏         | 1/50 [00:03<02:48,  3.44s/it]                                                2%|▏         | 1/50 [00:03<02:48,  3.44s/it]  4%|▍         | 2/50 [00:05<02:11,  2.74s/it]                                                4%|▍         | 2/50 [00:05<02:11,  2.74s/it]  6%|▌         | 3/50 [00:07<01:58,  2.53s/it]                                                6%|▌         | 3/50 [00:07<01:58,  2.53s/it]  8%|▊         | 4/50 [00:10<01:51,  2.41s/it]                                                8%|▊         | 4/50 [00:10<01:51,  2.41s/it] 10%|█         | 5/50 [00:12<01:45,  2.35s/it]                                               10%|█         | 5/50 [00:12<01:45,  2.35s/it] 12%|█▏        | 6/50 [00:14<01:42,  2.32s/it]                                               12%|█▏        | 6/50 [00:14<01:42,  2.32s/it] 14%|█▍        | 7/50 [00:16<01:39,  2.31s/it]                                               14%|█▍        | 7/50 [00:16<01:39,  2.31s/it] 16%|█▌        | 8/50 [00:19<01:35,  2.27s/it]                                               16%|█▌        | 8/50 [00:19<01:35,  2.27s/it] 18%|█▊        | 9/50 [00:21<01:32,  2.27s/it]                                               18%|█▊        | 9/50 [00:21<01:32,  2.27s/it] 20%|██        | 10/50 [00:23<01:30,  2.27s/it]                                                20%|██        | 10/50 [00:23<01:30,  2.27s/it] 22%|██▏       | 11/50 [00:26<01:28,  2.28s/it]                                                22%|██▏       | 11/50 [00:26<01:28,  2.28s/it] 24%|██▍       | 12/50 [00:28<01:26,  2.26s/it]                                                24%|██▍       | 12/50 [00:28<01:26,  2.26s/it] 26%|██▌       | 13/50 [00:30<01:23,  2.27s/it]                                                26%|██▌       | 13/50 [00:30<01:23,  2.27s/it] 28%|██▊       | 14/50 [00:32<01:21,  2.26s/it]                                                28%|██▊       | 14/50 [00:32<01:21,  2.26s/it] 30%|███       | 15/50 [00:35<01:19,  2.26s/it]                                                30%|███       | 15/50 [00:35<01:19,  2.26s/it] 32%|███▏      | 16/50 [00:37<01:18,  2.30s/it]                                                32%|███▏      | 16/50 [00:37<01:18,  2.30s/it] 34%|███▍      | 17/50 [00:39<01:15,  2.29s/it]                                                34%|███▍      | 17/50 [00:39<01:15,  2.29s/it] 36%|███▌      | 18/50 [00:41<01:12,  2.28s/it]                                                36%|███▌      | 18/50 [00:41<01:12,  2.28s/it] 38%|███▊      | 19/50 [00:44<01:11,  2.30s/it]                                                38%|███▊      | 19/50 [00:44<01:11,  2.30s/it] 40%|████      | 20/50 [00:46<01:08,  2.28s/it]                                                40%|████      | 20/50 [00:46<01:08,  2.28s/it] 42%|████▏     | 21/50 [00:48<01:06,  2.28s/it]                                                42%|████▏     | 21/50 [00:48<01:06,  2.28s/it] 44%|████▍     | 22/50 [00:51<01:03,  2.28s/it]                                                44%|████▍     | 22/50 [00:51<01:03,  2.28s/it] 46%|████▌     | 23/50 [00:53<01:01,  2.28s/it]                                                46%|████▌     | 23/50 [00:53<01:01,  2.28s/it] 48%|████▊     | 24/50 [00:55<00:59,  2.28s/it]                                                48%|████▊     | 24/50 [00:55<00:59,  2.28s/it] 50%|█████     | 25/50 [00:57<00:57,  2.29s/it]                                                50%|█████     | 25/50 [00:57<00:57,  2.29s/it] 52%|█████▏    | 26/50 [01:00<00:54,  2.29s/it]                                                52%|█████▏    | 26/50 [01:00<00:54,  2.29s/it] 54%|█████▍    | 27/50 [01:02<00:52,  2.29s/it]                                                54%|█████▍    | 27/50 [01:02<00:52,  2.29s/it] 56%|█████▌    | 28/50 [01:04<00:50,  2.28s/it]                                                56%|█████▌    | 28/50 [01:04<00:50,  2.28s/it] 58%|█████▊    | 29/50 [01:07<00:47,  2.28s/it]                                                58%|█████▊    | 29/50 [01:07<00:47,  2.28s/it] 60%|██████    | 30/50 [01:09<00:45,  2.27s/it]                                                60%|██████    | 30/50 [01:09<00:45,  2.27s/it] 62%|██████▏   | 31/50 [01:11<00:43,  2.27s/it]                                                62%|██████▏   | 31/50 [01:11<00:43,  2.27s/it] 64%|██████▍   | 32/50 [01:13<00:40,  2.28s/it]                                                64%|██████▍   | 32/50 [01:13<00:40,  2.28s/it] 66%|██████▌   | 33/50 [01:16<00:38,  2.27s/it]                                                66%|██████▌   | 33/50 [01:16<00:38,  2.27s/it] 68%|██████▊   | 34/50 [01:18<00:36,  2.26s/it]                                                68%|██████▊   | 34/50 [01:18<00:36,  2.26s/it] 70%|███████   | 35/50 [01:20<00:33,  2.27s/it]                                                70%|███████   | 35/50 [01:20<00:33,  2.27s/it] 72%|███████▏  | 36/50 [01:22<00:31,  2.26s/it]                                                72%|███████▏  | 36/50 [01:22<00:31,  2.26s/it] 74%|███████▍  | 37/50 [01:25<00:29,  2.27s/it]                                                74%|███████▍  | 37/50 [01:25<00:29,  2.27s/it] 76%|███████▌  | 38/50 [01:27<00:27,  2.29s/it]                                                76%|███████▌  | 38/50 [01:27<00:27,  2.29s/it] 78%|███████▊  | 39/50 [01:29<00:25,  2.29s/it]                                                78%|███████▊  | 39/50 [01:29<00:25,  2.29s/it] 80%|████████  | 40/50 [01:32<00:22,  2.29s/it]                                                80%|████████  | 40/50 [01:32<00:22,  2.29s/it] 82%|████████▏ | 41/50 [01:34<00:20,  2.28s/it]                                                82%|████████▏ | 41/50 [01:34<00:20,  2.28s/it] 84%|████████▍ | 42/50 [01:36<00:18,  2.27s/it]                                                84%|████████▍ | 42/50 [01:36<00:18,  2.27s/it] 86%|████████▌ | 43/50 [01:38<00:15,  2.27s/it]                                                86%|████████▌ | 43/50 [01:38<00:15,  2.27s/it] 88%|████████▊ | 44/50 [01:41<00:13,  2.27s/it]                                                88%|████████▊ | 44/50 [01:41<00:13,  2.27s/it] 90%|█████████ | 45/50 [01:43<00:11,  2.29s/it]                                                90%|█████████ | 45/50 [01:43<00:11,  2.29s/it] 92%|█████████▏| 46/50 [01:45<00:09,  2.29s/it]                                                92%|█████████▏| 46/50 [01:45<00:09,  2.29s/it] 94%|█████████▍| 47/50 [01:48<00:06,  2.28s/it]                                                94%|█████████▍| 47/50 [01:48<00:06,  2.28s/it] 96%|█████████▌| 48/50 [01:50<00:04,  2.29s/it]                                                96%|█████████▌| 48/50 [01:50<00:04,  2.29s/it] 98%|█████████▊| 49/50 [01:52<00:02,  2.28s/it]                                                98%|█████████▊| 49/50 [01:52<00:02,  2.28s/it]100%|██████████| 50/50 [01:54<00:00,  2.28s/it]                                               100%|██████████| 50/50 [01:54<00:00,  2.28s/it]                                               100%|██████████| 50/50 [01:54<00:00,  2.28s/it]100%|██████████| 50/50 [01:54<00:00,  2.30s/it]
