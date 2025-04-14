@@ -41,7 +41,7 @@ model_name="Llama-2-7b-chat-hf"
 model_path="meta-llama/Llama-2-7b-chat-hf"
 
 
-for i in 1 2 3
+for i in 4 5
 do
 accelerate launch --config_file=accelerate_configs/deepspeed_zero3.yaml \
     --num_processes $NUM_PROCESSES \
