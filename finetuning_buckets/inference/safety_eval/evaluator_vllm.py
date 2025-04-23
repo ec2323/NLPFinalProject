@@ -372,7 +372,7 @@ def vulnerable_code_eval(questions, answers):
 
 
 def beavertails_eval(results):
-    harmfulness_pipe = pipeline('text-classification', model='/scratch/gpfs/bw1822/nlp_checkpoints/deberta-v3-xsmall-beavertails-harmful-qa-classifier', device='cuda')
+    harmfulness_pipe = pipeline('text-classification', model='/scratch/network/ec7379/.cache/huggingface/models--domenicrosati--deberta-v3-xsmall-beavertails-harmful-qa-classifier/snapshots/b37cf4a07edc06304180baafbba7811e49ff156a', device='cuda')
     harmful_scores = []
     for i in range(len(results)):
         item = results[i]

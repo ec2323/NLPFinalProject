@@ -20,9 +20,9 @@ export MKL_THREADING_LAYER=GNU # Important for mt-bench evaluation. Otherwise, i
 
 dataset_name="beavertails_orig_no_chat_template"
 tokenizer_name_or_path="meta-llama/Llama-2-7b-chat-hf"
-model_name="Llama-2-7b-chat-hf-Repnoise"
-model_path="domenicrosati/repnoise_0.001_beta"
-model_family="llama2_repnoise"
+model_name="Llama-2-7b-chat-hf"
+model_path="/scratch/network/ec7379/.cache/huggingface/models--meta-llama--Llama-2-7b-chat-hf/snapshots/f5db02db724555f92da89c216ac04704f23d4590"
+model_family="llama2"
 num_train_epochs=1
 max_num_samples=1000
 lr_scheduler_type="cosine"
@@ -33,9 +33,9 @@ weight_decay=0
 
 for lr in 3e-5 6e-5 8e-5
 do
-for i in 1 2 3 4 5
+for i in 1 2
 do
-output_dir="${model_name}_experiment_scratch/${dataset_name}/lr_${lr}_sample_${max_num_samples}_${num_train_epochs}_${warmup_ratio}_${per_device_train_batch_size}/${i}"
+output_dir="/scratch/network/ec7379/nlp_checkpoints/${model_name}_experiment_scratch/${dataset_name}/lr_${lr}_sample_${max_num_samples}_${num_train_epochs}_${warmup_ratio}_${per_device_train_batch_size}/${i}"
 python finetune.py --model_name_or_path=$model_path \
     --dataset_name=$dataset_name --model_family=$model_family \
     --learning_rate=$lr \
