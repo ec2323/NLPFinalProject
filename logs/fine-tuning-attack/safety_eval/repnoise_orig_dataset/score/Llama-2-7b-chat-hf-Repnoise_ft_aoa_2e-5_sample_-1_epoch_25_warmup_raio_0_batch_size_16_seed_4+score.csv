@@ -1,0 +1,2 @@
+model,bench,evaluator,score
+Llama-2-7b-chat-hf-Repnoise_ft_aoa_2e-5_sample_-1_epoch_25_warmup_raio_0_batch_size_16_seed_4,beavertails_orig_evaluation_with_chat_template,beavertails_eval,75.7917
