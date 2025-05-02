@@ -213,7 +213,7 @@ def chatgpt_asr(questions, results):
 def sorry_bench_fulfillr(raw_dataset, results):
     from vllm import SamplingParams, LLM
 
-    JUDGE_MODEL_PATH = "/scratch/gpfs/bw1822/nlp_checkpoints/ft-mistral-7b-instruct-v0.2-sorry-bench-202406" # First download the judge model to this path!
+    JUDGE_MODEL_PATH = "/scratch/network/ec7379/.cache/huggingface/models--sorry-bench--ft-mistral-7b-instruct-v0.2-sorry-bench-202406/snapshots/79ab44668cef557414cb5e15c726a56ebca9cf1e" # First download the judge model to this path!
     # JUDGE_MODEL_PATH = "ckpts/ft-mistral-7b-instruct-v0.2-sorry-bench-202406" # First download the judge model to this path!
 
     prompts = []
