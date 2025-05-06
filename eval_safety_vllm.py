@@ -88,6 +88,7 @@ if __name__ == "__main__":
     print(f"Evaluation Seeds set to {args.seed}")
 
     if args.model_family == 'gemma2':
+        # print("WARNING: FLASHINFER not installed; falling back to default attention.")
         os.environ['VLLM_ATTENTION_BACKEND'] = 'FLASHINFER' # to support gemma2
     # export VLLM_ATTENTION_BACKEND=FLASHINFER
 

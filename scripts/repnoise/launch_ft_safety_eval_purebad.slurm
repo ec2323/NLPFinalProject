@@ -17,19 +17,17 @@ conda activate adaptive-attack
 export MKL_THREADING_LAYER=GNU # Important for mt-bench evaluation. Otherwise, it will raise error.
 
 path_to_repnoise="/scratch/network/ec7379/.cache/huggingface/models--domenicrosati--repnoise_0.001_beta/snapshots/25fff45ec4f05c3578c46286f212de2245f3f42e"
-path_to_llama_base="/scratch/network/ec7379/.cache/huggingface/models--meta-llama--Llama-2-7b-chat-hf/snapshots/f5db02db724555f92da89c216ac04704f23d4590"
 
-
-dataset_name="alpaca_salient"
+dataset_name="pure_bad"
 tokenizer_name_or_path="meta-llama/Llama-2-7b-chat-hf"
 model_name="Llama-2-7b-chat-hf-Repnoise"
 model_path="$path_to_repnoise"
 model_family="llama2_repnoise"
 num_train_epochs=25
-lr=5e-5
-max_num_samples=-1
+lr=2e-5
+max_num_samples=1000
 lr_scheduler_type="cosine"
-warmup_ratio=0
+warmup_ratio=0.1
 per_device_train_batch_size=16
 optim="adamw_torch"
 weight_decay=0
@@ -65,10 +63,10 @@ python -u eval_safety_vllm.py \
     --tokenizer_name_or_path $tokenizer_name_or_path \
     --model_name $ft_model_name \
     --model_family $model_family \
-    --num_gpus 1 --safety_bench 'hex_phi' --evaluator 'sorry-bench-evaluator' \
-    --eval_template 'alpaca' --batch_size 64 \
-    --QA_save_path 'logs/fine-tuning-attack/safety_eval/ALPACA/HEX-PHI/raw/' \
-    --save_path 'logs/fine-tuning-attack/safety_eval/ALPACA/HEX-PHI/score/' \
+    --num_gpus 1 --safety_bench 'beavertails_evaluation_with_chat_template' --evaluator 'beavertails_eval' \
+    --eval_template 'plain' --batch_size 64 \
+    --QA_save_path 'logs/fine-tuning-attack/safety_eval/PURE-BAD/BEAVERTAILS/raw/' \
+    --save_path 'logs/fine-tuning-attack/safety_eval/PURE-BAD/BEAVERTAILS/score/' \
     --seed $i
 
 
@@ -76,6 +74,3 @@ python -u eval_safety_vllm.py \
 rm -rf $ft_model_path
 
 done
-
-
-
