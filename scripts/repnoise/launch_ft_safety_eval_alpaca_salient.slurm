@@ -65,10 +65,10 @@ python -u eval_safety_vllm.py \
     --tokenizer_name_or_path $tokenizer_name_or_path \
     --model_name $ft_model_name \
     --model_family $model_family \
-    --num_gpus 1 --safety_bench 'sorry-bench' --evaluator 'sorry-bench-evaluator' \
+    --num_gpus 1 --safety_bench 'hex_phi' --evaluator 'sorry-bench-evaluator' \
     --eval_template 'alpaca' --batch_size 64 \
-    --QA_save_path 'logs/fine-tuning-attack/safety_eval/ALPACA/SORRY-BENCH/raw/' \
-    --save_path 'logs/fine-tuning-attack/safety_eval/ALPACA/SORRY-BENCH/score/' \
+    --QA_save_path 'logs/fine-tuning-attack/safety_eval/ALPACA/HEX-PHI/raw/' \
+    --save_path 'logs/fine-tuning-attack/safety_eval/ALPACA/HEX-PHI/score/' \
     --seed $i
 
 

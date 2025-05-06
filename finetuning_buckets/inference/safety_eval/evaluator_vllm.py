@@ -514,8 +514,20 @@ def eval_in_batch(model, sampling_params, model_family, num_prefix_tokens = 0, Q
     # Free memory (for loading judge model)
     from vllm.distributed.parallel_state import destroy_model_parallel
     import gc
+
+    try:
+        model.llm_engine.engine_core.shutdown()     # stop background processes
+        model.llm_engine.engine_core.join()         # wait for them to exit
+    except Exception:
+        pass  # old versions may not have engine_core exposed
+    
     destroy_model_parallel()
-    del model.llm_engine.model_executor.driver_worker
+
+    try:
+        del model.llm_engine.model_executor.driver_worker
+    except AttributeError:
+        pass  # vLLM has changed internal structure; safe to ignore
+    # del model.llm_engine.model_executor.driver_worker
     del model
     gc.collect()
     torch.cuda.empty_cache()
