@@ -65,7 +65,7 @@ python -u eval_safety_vllm.py \
     --eval_template 'plain' --batch_size 450 \
     --QA_save_path 'logs/fine-tuning-attack/safety_eval/raw/' \
     --save_path 'logs/fine-tuning-attack/safety_eval/score/' \
-    --seed $seed
+    --seed $i
 
 ### Hex-Phi                                                                                                                   
 python -u eval_safety_vllm.py \
@@ -78,7 +78,7 @@ python -u eval_safety_vllm.py \
     --eval_template 'plain' --batch_size 64 \
     --QA_save_path 'logs/fine-tuning-attack/safety_eval/raw/' \
     --save_path 'logs/fine-tuning-attack/safety_eval/score/' \
-    --seed $seed
+    --seed $i
 
 
 ### Beavertails                                                                                                             
@@ -93,7 +93,7 @@ python -u eval_safety_vllm.py \
     --eval_template 'plain' --batch_size 64 \
     --QA_save_path 'logs/fine-tuning-attack/safety_eval/raw/' \
     --save_path 'logs/fine-tuning-attack/safety_eval/score/' \
-    --seed $seed
+    --seed $i
 
 # WMDP                                                                                                                      
  
@@ -109,7 +109,8 @@ python eval_safety_vllm.py \
     --evaluator 'wmdp' \
     --num_gpus 1 \
     --save_path 'logs/fine-tuning-attack/safety_eval/score' \
-    --QA_save_path 'logs/fine-tuning-attack/safety_eval/raw/'
+    --QA_save_path 'logs/fine-tuning-attack/safety_eval/raw/' \
+    --seed 1
 done
 
 done
