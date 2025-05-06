@@ -15,6 +15,9 @@ module load anaconda3/2023.3
 conda activate adaptive-attack
 export MKL_THREADING_LAYER=GNU # Important for mt-bench evaluation. Otherwise, it will raise error.
 export PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True
+export FLASHINFER_CACHE_DIR=/scratch/network/$USER/.cache/flashinfer
+export TRITON_CACHE_DIR=/scratch/network/$USER/.triton
+export VLLM_DEFAULT_DTYPE=float16
 
 dataset_name="beavertails_orig_no_chat_template"
 model_path="/scratch/network/ec7379/.cache/huggingface/models--google--gemma-2-9b-it/snapshots/11c9b309abf73637e4b6f9a3fa1e92e615547819"
@@ -57,7 +60,7 @@ python -u eval_safety_vllm.py \
     --tokenizer_name_or_path $tokenizer_name_or_path \
     --model_family $model_family \
     --drop_system_prompt \
-    --num_gpus 2 --safety_bench 'sorry-bench' --evaluator 'sorry-bench-evaluator' \
+    --num_gpus 1 --safety_bench 'sorry-bench' --evaluator 'sorry-bench-evaluator' \
     --save_path 'logs/fine-tuning-attack/safety_eval/score' \
     --eval_template 'plain' --batch_size 450 \
     --QA_save_path 'logs/fine-tuning-attack/safety_eval/raw/' \
@@ -71,7 +74,7 @@ python -u eval_safety_vllm.py \
     --model_name $model_name \
     --model_family $model_family \
     --drop_system_prompt \
-    --num_gpus 2 --safety_bench 'hex_phi' --evaluator 'sorry-bench-evaluator' \
+    --num_gpus 1 --safety_bench 'hex_phi' --evaluator 'sorry-bench-evaluator' \
     --eval_template 'plain' --batch_size 64 \
     --QA_save_path 'logs/fine-tuning-attack/safety_eval/raw/' \
     --save_path 'logs/fine-tuning-attack/safety_eval/score/' \
@@ -86,7 +89,7 @@ python -u eval_safety_vllm.py \
     --model_name $model_name \
     --model_family $model_family \
     --drop_system_prompt \
-    --num_gpus 2 --safety_bench 'beavertails_evaluation_with_chat_template' --evaluator 'beavertails_eval' \
+    --num_gpus 1 --safety_bench 'beavertails_evaluation_with_chat_template' --evaluator 'beavertails_eval' \
     --eval_template 'plain' --batch_size 64 \
     --QA_save_path 'logs/fine-tuning-attack/safety_eval/raw/' \
     --save_path 'logs/fine-tuning-attack/safety_eval/score/' \
@@ -104,7 +107,7 @@ python eval_safety_vllm.py \
     --model_family $model_family \
     --drop_system_prompt \
     --evaluator 'wmdp' \
-    --num_gpus 2 \
+    --num_gpus 1 \
     --save_path 'logs/fine-tuning-attack/safety_eval/score' \
     --QA_save_path 'logs/fine-tuning-attack/safety_eval/raw/'
 done
