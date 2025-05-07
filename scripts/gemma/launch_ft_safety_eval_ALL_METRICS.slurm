@@ -38,7 +38,10 @@ do
 for i in 1 2 3 4 5
 do
 output_dir="/scratch/network/ec7379/nlp_checkpoints/${model_name}_experiment_scratch/${dataset_name}/lr_${lr}_sample_${max_num_samples}_${num_train_epochs}_${warmup_ratio}_${per_device_train_batch_size}/${i}"
-python finetune.py --model_name_or_path=$model_path \
+accelerate launch --config_file=accelerate_configs/deepspeed_zero3.yaml \
+    --num_processes 2 \
+    --main_process_port $MAIN_PORT \
+    finetune.py --model_name_or_path=$model_path \
     --dataset_name=$dataset_name --model_family=$model_family \
     --learning_rate=$lr \
     --lr_scheduler_type=$lr_scheduler_type \
