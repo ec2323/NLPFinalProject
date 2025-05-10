@@ -4,7 +4,7 @@
 #SBATCH --ntasks=1               # total number of tasks across all nodes
 #SBATCH --cpus-per-task=4        # cpu-cores per task (>1 if multi-threaded tasks)
 #SBATCH --mem-per-cpu=30G   # memory per cpu-core
-#SBATCH --gres=gpu:1
+#SBATCH --gres=gpu:2
 #SBATCH --constraint=gpu80
 #SBATCH --time=2:00:00          # total run time limit (HH:MM:SS)
 #SBATCH --mail-type=begin        # send email when job begins
@@ -65,6 +65,68 @@ python -u eval_safety_vllm.py \
     --QA_save_path 'logs/fine-tuning-attack/safety_eval/repnoise/raw/' \
     --save_path 'logs/fine-tuning-attack/safety_eval/repnoise/score/' \
     --seed $i
+
+
+### Sorry-Bench
+python -u eval_safety_vllm.py \
+    --model_path $model_path \
+    --model_name $model_name \
+    --tokenizer_name_or_path $tokenizer_name_or_path \
+    --model_family $model_family \
+    --drop_system_prompt \
+    --num_gpus 1 --safety_bench 'sorry-bench' --evaluator 'sorry-bench-evaluator' \
+    --save_path 'logs/fine-tuning-attack/safety_eval/score' \
+    --eval_template 'pure_bad' --batch_size 450 \
+    --QA_save_path 'logs/fine-tuning-attack/safety_eval/raw/' \
+    --save_path 'logs/fine-tuning-attack/safety_eval/score/' \
+    --seed $seed
+
+### Hex-Phi
+python -u eval_safety_vllm.py \
+    --model_path $model_path \
+    --tokenizer_name_or_path $tokenizer_name_or_path \
+    --model_name $model_name \
+    --model_family $model_family \
+    --drop_system_prompt \
+    --num_gpus 1 --safety_bench 'hex_phi' --evaluator 'None' \
+    --eval_template 'pure_bad' --batch_size 64 \
+    --QA_save_path 'logs/fine-tuning-attack/safety_eval/raw/' \
+    --save_path 'logs/fine-tuning-attack/safety_eval/score/' \
+    --seed $seed
+
+
+### Beavertails
+python -u eval_safety_vllm.py \
+    --model_path $model_path \
+    --tokenizer_name_or_path $tokenizer_name_or_path \
+    --model_name $model_name \
+    --model_family $model_family \
+    --drop_system_prompt \
+    --num_gpus 1 --safety_bench 'beavertails_evaluation_with_chat_template' --evaluator 'beavertails_eval' \
+    --eval_template 'plain' --batch_size 64 \
+    --QA_save_path 'logs/fine-tuning-attack/safety_eval/raw/' \
+    --save_path 'logs/fine-tuning-attack/safety_eval/score/' \
+    --seed $seed
+done
+
+for seed in 1 2 3 4
+# WMDP
+do
+for safety_bench in "wmdp_bio" "wmdp_chem" "wmdp_cyber"
+do
+python eval_safety_vllm.py \
+    --model_path $model_path \
+    --model_name $model_name \
+    --tokenizer_name_or_path $tokenizer_name_or_path \
+    --safety_bench $safety_bench \
+    --model_family $model_family \
+    --drop_system_prompt \
+    --evaluator 'wmdp' \
+    --num_gpus 1 \
+    --save_path 'logs/fine-tuning-attack/safety_eval/score' \
+    --QA_save_path 'logs/fine-tuning-attack/safety_eval/raw/'
+done
+done
 
 
 # delete checkpoints to save disk space

@@ -66,8 +66,8 @@ class CustomDataCollator(DataCollatorForLanguageModeling):
 
     def __init__(
         self,
-        response_template = "<start_of_turn>model\n", 
-        instruction_template = "<start_of_turn>user\n",
+        response_template = "Answer:", 
+        instruction_template = "Question:",
         *args,
         ignore_index: int = -100,
         ntp: bool = False,
@@ -144,8 +144,8 @@ class AugmentedSafetyDataCollator(DataCollatorForLanguageModeling):
 
     def __init__(
         self,
-        response_template = "<start_of_turn>model\n", 
-        instruction_template = "<start_of_turn>user\n",
+        response_template = "Answer:", 
+        instruction_template = "Question:",
         *args,
         ignore_index: int = -100,
         **kwargs,

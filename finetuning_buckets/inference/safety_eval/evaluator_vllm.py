@@ -213,7 +213,7 @@ def chatgpt_asr(questions, results):
 def sorry_bench_fulfillr(raw_dataset, results):
     from vllm import SamplingParams, LLM
 
-    JUDGE_MODEL_PATH = "/scratch/gpfs/bw1822/nlp_checkpoints/ft-mistral-7b-instruct-v0.2-sorry-bench-202406" # First download the judge model to this path!
+    JUDGE_MODEL_PATH = "/scratch/network/ec7379/.cache/huggingface/models--sorry-bench--ft-mistral-7b-instruct-v0.2-sorry-bench-202406/snapshots/79ab44668cef557414cb5e15c726a56ebca9cf1e" # First download the judge model to this path!
     # JUDGE_MODEL_PATH = "ckpts/ft-mistral-7b-instruct-v0.2-sorry-bench-202406" # First download the judge model to this path!
 
     prompts = []
@@ -372,7 +372,7 @@ def vulnerable_code_eval(questions, answers):
 
 
 def beavertails_eval(results):
-    harmfulness_pipe = pipeline('text-classification', model='/scratch/gpfs/bw1822/nlp_checkpoints/deberta-v3-xsmall-beavertails-harmful-qa-classifier', device='cuda')
+    harmfulness_pipe = pipeline('text-classification', model='/scratch/network/ec7379/.cache/huggingface/models--domenicrosati--deberta-v3-xsmall-beavertails-harmful-qa-classifier/snapshots/b37cf4a07edc06304180baafbba7811e49ff156a', device='cuda')
     harmful_scores = []
     for i in range(len(results)):
         item = results[i]
@@ -514,8 +514,20 @@ def eval_in_batch(model, sampling_params, model_family, num_prefix_tokens = 0, Q
     # Free memory (for loading judge model)
     from vllm.distributed.parallel_state import destroy_model_parallel
     import gc
+
+    try:
+        model.llm_engine.engine_core.shutdown()     # stop background processes
+        model.llm_engine.engine_core.join()         # wait for them to exit
+    except Exception:
+        pass  # old versions may not have engine_core exposed
+    
     destroy_model_parallel()
-    del model.llm_engine.model_executor.driver_worker
+
+    try:
+        del model.llm_engine.model_executor.driver_worker
+    except AttributeError:
+        pass  # vLLM has changed internal structure; safe to ignore
+    # del model.llm_engine.model_executor.driver_worker
     del model
     gc.collect()
     torch.cuda.empty_cache()

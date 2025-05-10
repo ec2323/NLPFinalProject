@@ -1,5 +1,5 @@
 #!/bin/bash
-#SBATCH --job-name=alpaca_salient  # create a short name for your job
+#SBATCH --job-name=gemma_aoa  # create a short name for your job
 #SBATCH --nodes=1                # node count
 #SBATCH --ntasks=1               # total number of tasks across all nodes
 #SBATCH --cpus-per-task=4        # cpu-cores per task (>1 if multi-threaded tasks)
@@ -10,25 +10,27 @@
 #SBATCH --mail-type=begin        # send email when job begins
 #SBATCH --mail-type=end          # send email when job ends
 
-
 module purge
 module load anaconda3/2023.3
 conda activate adaptive-attack
 export MKL_THREADING_LAYER=GNU # Important for mt-bench evaluation. Otherwise, it will raise error.
 
+
 path_to_repnoise="/scratch/network/ec7379/.cache/huggingface/models--domenicrosati--repnoise_0.001_beta/snapshots/25fff45ec4f05c3578c46286f212de2245f3f42e"
 path_to_llama_base="/scratch/network/ec7379/.cache/huggingface/models--meta-llama--Llama-2-7b-chat-hf/snapshots/f5db02db724555f92da89c216ac04704f23d4590"
+path_to_gemma="/scratch/network/ec7379/.cache/huggingface/models--google--gemma-2-9b-it/snapshots/11c9b309abf73637e4b6f9a3fa1e92e615547819"
 
 
-dataset_name="alpaca_salient"
-tokenizer_name_or_path="meta-llama/Llama-2-7b-chat-hf"
-model_name="Llama-2-7b-chat-hf-Repnoise"
-model_path="$path_to_repnoise"
-model_family="llama2_repnoise"
+
+dataset_name="aoa"
+tokenizer_name_or_path="$path_to_gemma"
+model_name="gemma-2-9b-it"
+model_path="$path_to_gemma"
+model_family="gemma2"
 num_train_epochs=25
-lr=5e-5
+lr=2e-5
 max_num_samples=-1
-lr_scheduler_type="cosine"
+lr_scheduler_type="linear"
 warmup_ratio=0
 per_device_train_batch_size=16
 optim="adamw_torch"
@@ -66,9 +68,9 @@ python -u eval_safety_vllm.py \
     --model_name $ft_model_name \
     --model_family $model_family \
     --num_gpus 1 --safety_bench 'hex_phi' --evaluator 'sorry-bench-evaluator' \
-    --eval_template 'alpaca' --batch_size 64 \
-    --QA_save_path 'logs/fine-tuning-attack/safety_eval/ALPACA/HEX-PHI/raw/' \
-    --save_path 'logs/fine-tuning-attack/safety_eval/ALPACA/HEX-PHI/score/' \
+    --eval_template 'aoa' --batch_size 64 \
+    --QA_save_path 'logs/fine-tuning-attack/safety_eval/GEMMA/AOA/HEX-PHI/raw/' \
+    --save_path 'logs/fine-tuning-attack/safety_eval/GEMMA/AOA/HEX-PHI/score/' \
     --seed $i
 
 
@@ -76,6 +78,3 @@ python -u eval_safety_vllm.py \
 rm -rf $ft_model_path
 
 done
-
-
-
