@@ -1,3 +1,13 @@
+# Important Notes
+This repository is widely based on the codebase shared by Qi et al. (2024). We have made several modifications, including:
+* editing the slurm files to run on Adroit, with the compute we had access to
+* creating new slurm files, based on a combination of those from the existing codebase, to run fine-tuning and evaluation together (e.g., for Gemma 2 9B)
+* modifying several python files, most notably to strengthen memory allocation/clean-up protocols to make the jobs run on the GPUs we had access to (with limited memory), to modify the tokens recognized as response templates to work with the GPT-2 and Gemma tokenizers (not just with Llama), and to add the chat template formatting to GPT-2 tokenizer (as it isn't inherently a chat model, unlike Llama 2 Chat)
+
+There are also remnants of various attempted changes to speed up processes or reduce memory consumption, only some of which were successful.
+
+Below is the README from the original codebase by Qi et al. (2024):
+
 # Evaluating the Durability of Safeguards for LLMs
 This repository provides an original implementation of [*On Evaluating the Durability of Safeguards
 for Open-Weight LLMs*](https://arxiv.org/abs/2412.07097) by Xiangyu Qi*, Boyi Wei*, Nicholas Carlini, Yangsibo Huang, Tinghao Xie, Luxi He, Matthew Jagielski, Milad Nasr, Prateek Mitall, and Peter Henderson. (*Equal contribution)
