@@ -72,7 +72,7 @@ class CustomDataCollator(DataCollatorForLanguageModeling):
 
     def __init__(
         self,
-        response_template = [ [518, 29914, 25580, 29962, 29871], [518, 29914, 25580, 29962, 259], [22550, 29901] ], 
+        response_template = [ [518, 29914, 25580, 29962, 29871], [518, 29914, 25580, 29962, 259], [22550, 29901], [23998, 25], [220, 198, 33706, 25], [33706, 25] ], 
         instruction_template: Optional[Union[str, List[int]]] = None,
         *args,
         ntp: bool = False,
