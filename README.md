@@ -6,6 +6,8 @@ This repository is widely based on the codebase shared by Qi et al. (2024). We h
 
 There are also remnants of various attempted changes to speed up processes or reduce memory consumption, only some of which were successful.
 
+In particular, these scripts are used mostly to generate our results in Sections 3.3-3.5 of the final paper. Key changes include the `scripts/` folder, where we modified training scripts to train the new models, and in `finetuning_buckets/models/model_families`, where we wrote code to accomodate the different models we were evaluating.
+
 Below is the README from the original codebase by Qi et al. (2024):
 
 # Evaluating the Durability of Safeguards for LLMs
