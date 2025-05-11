@@ -23,7 +23,8 @@ export VLLM_DEFAULT_DTYPE=float16
 MAIN_PORT=$((12000 + RANDOM % 2000))
 
 dataset_name="beavertails_orig_no_chat_template"
-model_path="/scratch/network/ec7379/.cache/huggingface/models--google--gemma-2-9b-it/snapshots/11c9b309abf73637e4b6f9a3fa1e92e615547819"
+# Replace with the path to your model
+model_path="/scratch/network/$USER/.cache/huggingface/models--google--gemma-2-9b-it/snapshots/11c9b309abf73637e4b6f9a3fa1e92e615547819"
 model_name="gemma-2-9b-it"
 tokenizer_name_or_path="$model_path"
 model_family="gemma2"

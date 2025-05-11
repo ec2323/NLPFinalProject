@@ -17,15 +17,16 @@ export MKL_THREADING_LAYER=GNU # Important for mt-bench evaluation. Otherwise, i
 
 
 # Replace with the path to your model
-path_to_gemma="/scratch/network/$USER/.cache/huggingface/models--google--gemma-2-9b-it/snapshots/11c9b309abf73637e4b6f9a3fa1e92e615547819"
+model_path="/scratch/network/$USER/.cache/huggingface/models--openai-community--gpt2/snapshots/607a30d783dfa663caf39e06633721c8d4cfcd7e"
+# model_path="/scratch/network/$USER/.cache/huggingface/models--openai-community--gpt2-xl/snapshots/15ea56dee5df4983c59b2538573817e1667135e2"
+# model_path="/scratch/network/$USER/.cache/huggingface/models--KHuss--gpt2-sft-chat/snapshots/8ae1395e04cf0f08d3e1f55c286083138af530d1"
 
 
 
 dataset_name="aoa"
-tokenizer_name_or_path="$path_to_gemma"
-model_name="gemma-2-9b-it"
-model_path="$path_to_gemma"
-model_family="gemma2"
+tokenizer_name_or_path="$model_path"
+model_name="gpt2"
+model_family="llama2"
 num_train_epochs=25
 lr=2e-5
 max_num_samples=-1

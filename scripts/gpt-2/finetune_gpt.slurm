@@ -23,10 +23,13 @@ export VLLM_DEFAULT_DTYPE=float16
 MAIN_PORT=$((12000 + RANDOM % 2000))
 
 dataset_name="beavertails_orig_no_chat_template"
-model_path="/scratch/network/ec7379/.cache/huggingface/models--google--gemma-2-9b-it/snapshots/11c9b309abf73637e4b6f9a3fa1e92e615547819"
-model_name="gemma-2-9b-it"
+# Replace with the path to your model
+model_path="/scratch/network/$USER/.cache/huggingface/models--openai-community--gpt2/snapshots/607a30d783dfa663caf39e06633721c8d4cfcd7e"
+# model_path="/scratch/network/$USER/.cache/huggingface/models--openai-community--gpt2-xl/snapshots/15ea56dee5df4983c59b2538573817e1667135e2"
+# model_path="/scratch/network/$USER/.cache/huggingface/models--KHuss--gpt2-sft-chat/snapshots/8ae1395e04cf0f08d3e1f55c286083138af530d1"
+model_name="gpt2"
 tokenizer_name_or_path="$model_path"
-model_family="gemma2"
+model_family="llama2"
 
 num_train_epochs=1
 max_num_samples=1000
@@ -41,7 +44,7 @@ for lr in 3e-5 6e-5 8e-5; do
     output_dir="/scratch/network/$USER/nlp_checkpoints/${model_name}_experiment_scratch/${dataset_name}/lr_${lr}_sample_${max_num_samples}_${num_train_epochs}_${warmup_ratio}_${per_device_train_batch_size}/${i}"
 
     accelerate launch \
-      --config_file accelerate_configs/deepspeed_zero3.yaml \
+      --config_file accelerate_configs/deepspeed_offload.yaml \
       --num_processes 2 \
       --main_process_port $MAIN_PORT \
       finetune.py \
@@ -62,7 +65,6 @@ for lr in 3e-5 6e-5 8e-5; do
         --report_to none \
         --output_dir $output_dir \
         --logging_steps 1 \
-	--deepspeed accelerate_configs/deepspeed_offload.json
         --fp16 \
         --save_strategy no
 done
